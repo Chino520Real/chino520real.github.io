@@ -3,7 +3,7 @@
 <html lang="en, jp, cn">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Chino520&#39;s Universe</title>
+    <title>comment test 2 | Chino520&#39;s Universe</title>
     <meta name="author" content="Chino520" />
     <meta name="description" content="INTJ" />
     <meta name="keywords" content="keyword1, keywords2" />
@@ -45,7 +45,11 @@
 
 
 
-<script src="/js/lib/search.js"></script>
+
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 
 
 
@@ -115,70 +119,35 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            
-<div id="archives">
-    
-    <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
+            <div class="article">
+    <div>
+        <h1>comment test 2</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/22
+        </span>
         
-        <div class="timeline" data-title="helloworld">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/10/21</div>
-                <a href="/2025/10/21/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="howtodevelopthehexoonyourgithub">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/10/21</div>
-                <a href="/2025/10/21/How-to-develop-the-Hexo-on-your-GitHub/">
-                    <h3>How to develop the Hexo on your GitHub</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="commenttest">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/10/21</div>
-                <a href="/2025/10/21/Comment-test/">
-                    <h3>Comment test</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="commenttest2">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2025/10/22</div>
-                <a href="/2025/10/22/comment-test-2/">
-                    <h3>comment test 2</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                </div>
-            </div>
-        </div>
         
     </div>
+    
+    <div class="content" v-pre>
+        
+    </div>
+    
+    
+    
+    
+    
+    
+    <div id="comment">
+        <div id="twikoo-container"></div>
+    </div>
+    
+    
 </div>
 
             <footer id="footer">
@@ -209,6 +178,22 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "https://twikooforhexo.netlify.app/.netlify/functions/twikoo",
+        region: "",
+        path: ,
+        lang: "",
+    })
+</script>
+
+
     
 </body>
 </html>
