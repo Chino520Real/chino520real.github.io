@@ -48,10 +48,8 @@
 
 
 
-<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
 
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 
 
 
@@ -144,12 +142,12 @@
     
     
     
-        <!-- 样式文件 -->
-        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
-        <div id="comment">
-            <div id="waline-container"></div>
-        </div>
     
+        <!-- 样式文件 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.css" />
+        <div id="comment">
+            <div id="twikoo-container"></div>
+        </div>
     
     
 </div>
@@ -186,23 +184,16 @@
     
 
 
-<script>
-    Waline.init({
-        el: "#waline-container",
-        serverURL: "https://walineforhexo-q9ru9gxli-chino520reals-projects.vercel.app",
-        commentCount: true,
-        pageview: false,
-        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
-        meta: "nick,mail,link".split(","),
-        requiredMeta: "nick".split(","),
-        lang: "en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP",
-        wordLimit: 500,
-        pageSize: "10",
-        login: "disable",
-        
-    });
-</script>
 
+<script>
+    twikoo.init({
+        el: "#twikoo-container",
+        envId: "https://twikooforhexo.netlify.app/.netlify/functions/twikoo",
+        region: "",
+        path: "",
+        lang: "",
+    })
+</script>
 
 
     
