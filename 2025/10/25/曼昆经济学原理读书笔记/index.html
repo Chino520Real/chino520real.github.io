@@ -202,7 +202,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Macroeconomics/" style="color: #00bcd4">
+                <a href="/tags/Macroeconomics/" style="color: #ff7d73">
                     Macroeconomics
                 </a>
             </span>
@@ -313,6 +313,16 @@
 <!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <div id="aplayer-fixed"></div>
     <script>
+    // Define your playlist with multiple songs
+    const myPlaylist = [
+        {
+            name: 'Jay',
+            artist: 'Lukrembo',
+            url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- IMPORTANT: Update the path to your music files
+                              cover: '/images/Lukrembo - Jay (freetouse.com).webp'    // Optional: Add a cover image
+        }
+        // Add as many songs as you need here
+    ];
     const ap = new APlayer({
         container: document.getElementById('aplayer-fixed'),
                            fixed: true,        // Keeps the player at a fixed position
