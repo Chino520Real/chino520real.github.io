@@ -195,7 +195,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Programming-Languages/" style="color: #00a596">
+                <a href="/tags/Programming-Languages/" style="color: #ffa2c4">
                     Programming Languages
                 </a>
             </span>
@@ -300,13 +300,10 @@
     <script>
     const ap = new APlayer({
         container: document.getElementById('aplayer-fixed'),
-                           fixed: true, // This usually keeps the player visible as the user navigates
-                           audio: [{
-                               name: 'My Site Music',
-                               artist: 'Various',
-                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
-                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
-                           }]
+                           fixed: true,        // Keeps the player at a fixed position
+                           autoplay: true,     // Optional: Starts playing automatically
+                           **shuffle: true,** // **<-- THIS enables random play (shuffle)**
+                           audio: myPlaylist   // Use the defined playlist array
     });
     </script>
     <!-- hexo injector body_end end --></body>

@@ -164,7 +164,7 @@
         
         
         <span>
-            <a href="/categories/Technology/" style="background: #03a9f4">
+            <a href="/categories/Technology/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -175,7 +175,7 @@
         
         
         <span>
-            <a href="/categories/Technology/Blog/" style="background: #ff7d73">
+            <a href="/categories/Technology/Blog/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -186,7 +186,7 @@
         
         
         <span>
-            <a href="/categories/Economics/" style="background: #03a9f4">
+            <a href="/categories/Economics/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -248,13 +248,10 @@
     <script>
     const ap = new APlayer({
         container: document.getElementById('aplayer-fixed'),
-                           fixed: true, // This usually keeps the player visible as the user navigates
-                           audio: [{
-                               name: 'My Site Music',
-                               artist: 'Various',
-                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
-                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
-                           }]
+                           fixed: true,        // Keeps the player at a fixed position
+                           autoplay: true,     // Optional: Starts playing automatically
+                           **shuffle: true,** // **<-- THIS enables random play (shuffle)**
+                           audio: myPlaylist   // Use the defined playlist array
     });
     </script>
     <!-- hexo injector body_end end --></body>

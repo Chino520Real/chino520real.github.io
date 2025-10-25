@@ -164,7 +164,7 @@
         
         
         <span>
-            <a href="/categories/Technology/" style="background: #00bcd4">
+            <a href="/categories/Technology/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -188,7 +188,7 @@
         
         
         <span>
-            <a href="/categories/Economics/" style="background: #ffa2c4">
+            <a href="/categories/Economics/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -199,7 +199,7 @@
         
         
         <span>
-            <a href="/categories/Economics/Book-Summary/" style="background: #00bcd4">
+            <a href="/categories/Economics/Book-Summary/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -244,7 +244,7 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/HTML/" style="color: #00a596">
+                        <a href="/tags/HTML/" style="color: #ff7d73">
                             HTML
                         </a>
                     </span>
@@ -282,14 +282,14 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/Arch-Linux/" style="color: #ff7d73">
+                        <a href="/tags/Arch-Linux/" style="color: #00bcd4">
                             Arch Linux
                         </a>
                     </span>
                     
                     <span class="tag">
                         
-                        <a href="/tags/Hexo/" style="color: #00bcd4">
+                        <a href="/tags/Hexo/" style="color: #ff7d73">
                             Hexo
                         </a>
                     </span>
@@ -303,21 +303,21 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/GitHub/" style="color: #ff7d73">
+                        <a href="/tags/GitHub/" style="color: #00bcd4">
                             GitHub
                         </a>
                     </span>
                     
                     <span class="tag">
                         
-                        <a href="/tags/Node-js/" style="color: #03a9f4">
+                        <a href="/tags/Node-js/" style="color: #ff7d73">
                             Node.js
                         </a>
                     </span>
                     
                     <span class="tag">
                         
-                        <a href="/tags/Git/" style="color: #00a596">
+                        <a href="/tags/Git/" style="color: #ffa2c4">
                             Git
                         </a>
                     </span>
@@ -338,7 +338,7 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/LeanCloud/" style="color: #ff7d73">
+                        <a href="/tags/LeanCloud/" style="color: #00bcd4">
                             LeanCloud
                         </a>
                     </span>
@@ -352,14 +352,14 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/Vercel/" style="color: #ff7d73">
+                        <a href="/tags/Vercel/" style="color: #03a9f4">
                             Vercel
                         </a>
                     </span>
                     
                     <span class="tag">
                         
-                        <a href="/tags/DNS/" style="color: #03a9f4">
+                        <a href="/tags/DNS/" style="color: #ffa2c4">
                             DNS
                         </a>
                     </span>
@@ -410,13 +410,10 @@
     <script>
     const ap = new APlayer({
         container: document.getElementById('aplayer-fixed'),
-                           fixed: true, // This usually keeps the player visible as the user navigates
-                           audio: [{
-                               name: 'My Site Music',
-                               artist: 'Various',
-                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
-                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
-                           }]
+                           fixed: true,        // Keeps the player at a fixed position
+                           autoplay: true,     // Optional: Starts playing automatically
+                           **shuffle: true,** // **<-- THIS enables random play (shuffle)**
+                           audio: myPlaylist   // Use the defined playlist array
     });
     </script>
     <!-- hexo injector body_end end --></body>
