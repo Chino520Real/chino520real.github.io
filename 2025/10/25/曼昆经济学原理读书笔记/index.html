@@ -195,14 +195,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Microeconomics/" style="color: #03a9f4">
+                <a href="/tags/Microeconomics/" style="color: #00bcd4">
                     Microeconomics
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Macroeconomics/" style="color: #ffa2c4">
+                <a href="/tags/Macroeconomics/" style="color: #00a596">
                     Macroeconomics
                 </a>
             </span>
@@ -311,7 +311,7 @@
 
     
 <!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <div id="aplayer-fixed"></div>
+    <div id="aplayer"></div>
     <script>
     // Define your playlist with multiple songs
     const myPlaylist = [
@@ -378,11 +378,11 @@
         // Add as many songs as you need here
     ];
     const ap = new APlayer({
-        container: document.getElementById('aplayer-fixed'),
-                           fixed: true,        // Keeps the player at a fixed position
-                           autoplay: true,     // Optional: Starts playing automatically
-                           shuffle: true, // <-- THIS enables random play (shuffle)
-                           audio: myPlaylist   // Use the defined playlist array
+        container: document.getElementById('aplayer'),
+        fixed: true,        // Keeps the player at a fixed position
+        autoplay: false,     // Optional: Starts playing automatically
+        order: 'random',
+        audio: myPlaylist   // Use the defined playlist array
     });
     </script>
     <!-- hexo injector body_end end --></body>
