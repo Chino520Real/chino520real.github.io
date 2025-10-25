@@ -49,7 +49,9 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-<meta name="generator" content="Hexo 8.0.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head>
 <body>
     <div id="layout">
         <transition name="fade">
@@ -162,7 +164,7 @@
         
         
         <span>
-            <a href="/categories/Technology/" style="background: #03a9f4">
+            <a href="/categories/Technology/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -173,7 +175,7 @@
         
         
         <span>
-            <a href="/categories/Technology/Blog/" style="background: #ff7d73">
+            <a href="/categories/Technology/Blog/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -197,7 +199,7 @@
         
         
         <span>
-            <a href="/categories/Economics/Book-Summary/" style="background: #03a9f4">
+            <a href="/categories/Economics/Book-Summary/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -242,7 +244,7 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/Macroeconomics/" style="color: #03a9f4">
+                        <a href="/tags/Macroeconomics/" style="color: #00bcd4">
                             Macroeconomics
                         </a>
                     </span>
@@ -288,5 +290,19 @@
     </div>
     <script src="/js/main.js"></script>
     
-</body>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <div id="aplayer-fixed"></div>
+    <script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer-fixed'),
+                           fixed: true, // This usually keeps the player visible as the user navigates
+                           audio: [{
+                               name: 'My Site Music',
+                               artist: 'Various',
+                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
+                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
+                           }]
+    });
+    </script>
+    <!-- hexo injector body_end end --></body>
 </html>

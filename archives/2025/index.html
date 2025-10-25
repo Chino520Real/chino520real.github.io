@@ -51,7 +51,9 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-<meta name="generator" content="Hexo 8.0.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head>
 <body>
     <div id="layout">
         <transition name="fade">
@@ -191,49 +193,49 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Arch-Linux/" style="color: #ffa2c4">
+                            <a href="/tags/Arch-Linux/" style="color: #00a596">
                                 Arch Linux
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Hexo/" style="color: #00bcd4">
+                            <a href="/tags/Hexo/" style="color: #03a9f4">
                                 Hexo
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Spaceship/" style="color: #00a596">
+                            <a href="/tags/Spaceship/" style="color: #00bcd4">
                                 Spaceship
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/GitHub/" style="color: #00bcd4">
+                            <a href="/tags/GitHub/" style="color: #00a596">
                                 GitHub
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Node-js/" style="color: #00a596">
+                            <a href="/tags/Node-js/" style="color: #03a9f4">
                                 Node.js
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Git/" style="color: #ffa2c4">
+                            <a href="/tags/Git/" style="color: #ff7d73">
                                 Git
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Particlex/" style="color: #ff7d73">
+                            <a href="/tags/Particlex/" style="color: #00bcd4">
                                 Particlex
                             </a>
                         </span>
@@ -247,28 +249,28 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/LeanCloud/" style="color: #03a9f4">
+                            <a href="/tags/LeanCloud/" style="color: #ff7d73">
                                 LeanCloud
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/SupaBase/" style="color: #00a596">
+                            <a href="/tags/SupaBase/" style="color: #00bcd4">
                                 SupaBase
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/Vercel/" style="color: #ffa2c4">
+                            <a href="/tags/Vercel/" style="color: #03a9f4">
                                 Vercel
                             </a>
                         </span>
                         
                         <span class="tag">
                             
-                            <a href="/tags/DNS/" style="color: #ff7d73">
+                            <a href="/tags/DNS/" style="color: #00a596">
                                 DNS
                             </a>
                         </span>
@@ -327,7 +329,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/HTML/" style="color: #ff7d73">
+                            <a href="/tags/HTML/" style="color: #00bcd4">
                                 HTML
                             </a>
                         </span>
@@ -365,7 +367,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Programming-Languages/" style="color: #ffa2c4">
+                            <a href="/tags/Programming-Languages/" style="color: #03a9f4">
                                 Programming Languages
                             </a>
                         </span>
@@ -410,7 +412,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/Macroeconomics/" style="color: #ff7d73">
+                            <a href="/tags/Macroeconomics/" style="color: #00a596">
                                 Macroeconomics
                             </a>
                         </span>
@@ -457,5 +459,19 @@
     </div>
     <script src="/js/main.js"></script>
     
-</body>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <div id="aplayer-fixed"></div>
+    <script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer-fixed'),
+                           fixed: true, // This usually keeps the player visible as the user navigates
+                           audio: [{
+                               name: 'My Site Music',
+                               artist: 'Various',
+                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
+                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
+                           }]
+    });
+    </script>
+    <!-- hexo injector body_end end --></body>
 </html>

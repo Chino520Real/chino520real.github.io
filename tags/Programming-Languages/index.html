@@ -49,7 +49,9 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-<meta name="generator" content="Hexo 8.0.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head>
 <body>
     <div id="layout">
         <transition name="fade">
@@ -162,7 +164,7 @@
         
         
         <span>
-            <a href="/tags/Arch-Linux/" style="background: #ffa2c4">
+            <a href="/tags/Arch-Linux/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -173,7 +175,7 @@
         
         
         <span>
-            <a href="/tags/Hexo/" style="background: #00a596">
+            <a href="/tags/Hexo/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -184,7 +186,7 @@
         
         
         <span>
-            <a href="/tags/Spaceship/" style="background: #03a9f4">
+            <a href="/tags/Spaceship/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -195,7 +197,7 @@
         
         
         <span>
-            <a href="/tags/GitHub/" style="background: #ff7d73">
+            <a href="/tags/GitHub/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -206,7 +208,7 @@
         
         
         <span>
-            <a href="/tags/Node-js/" style="background: #03a9f4">
+            <a href="/tags/Node-js/" style="background: #ffa2c4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -217,7 +219,7 @@
         
         
         <span>
-            <a href="/tags/Git/" style="background: #ff7d73">
+            <a href="/tags/Git/" style="background: #03a9f4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -228,7 +230,7 @@
         
         
         <span>
-            <a href="/tags/Particlex/" style="background: #ffa2c4">
+            <a href="/tags/Particlex/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -239,7 +241,7 @@
         
         
         <span>
-            <a href="/tags/Waline/" style="background: #00a596">
+            <a href="/tags/Waline/" style="background: #03a9f4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -250,7 +252,7 @@
         
         
         <span>
-            <a href="/tags/LeanCloud/" style="background: #03a9f4">
+            <a href="/tags/LeanCloud/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -261,7 +263,7 @@
         
         
         <span>
-            <a href="/tags/SupaBase/" style="background: #00bcd4">
+            <a href="/tags/SupaBase/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -283,7 +285,7 @@
         
         
         <span>
-            <a href="/tags/DNS/" style="background: #ffa2c4">
+            <a href="/tags/DNS/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -294,7 +296,7 @@
         
         
         <span>
-            <a href="/tags/Markdown/" style="background: #00bcd4">
+            <a href="/tags/Markdown/" style="background: #03a9f4">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -329,7 +331,7 @@
         
         
         <span>
-            <a href="/tags/Microeconomics/" style="background: #03a9f4">
+            <a href="/tags/Microeconomics/" style="background: #00a596">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -340,7 +342,7 @@
         
         
         <span>
-            <a href="/tags/Macroeconomics/" style="background: #ffa2c4">
+            <a href="/tags/Macroeconomics/" style="background: #ff7d73">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -378,7 +380,7 @@
                     
                     <span class="tag">
                         
-                        <a href="/tags/Programming-Languages/" style="color: #00bcd4">
+                        <a href="/tags/Programming-Languages/" style="color: #ffa2c4">
                             Programming Languages
                         </a>
                     </span>
@@ -424,5 +426,19 @@
     </div>
     <script src="/js/main.js"></script>
     
-</body>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <div id="aplayer-fixed"></div>
+    <script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer-fixed'),
+                           fixed: true, // This usually keeps the player visible as the user navigates
+                           audio: [{
+                               name: 'My Site Music',
+                               artist: 'Various',
+                               url: '/music/Lukrembo - Jay (freetouse.com).mp3', // <-- CHANGE THIS URL
+                               cover: '/images/Lukrembo - Jay (freetouse.com).webp'
+                           }]
+    });
+    </script>
+    <!-- hexo injector body_end end --></body>
 </html>
