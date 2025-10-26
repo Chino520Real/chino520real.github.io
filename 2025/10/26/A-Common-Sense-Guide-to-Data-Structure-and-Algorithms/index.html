@@ -3,7 +3,7 @@
 <html lang="en, jp, cn">
 <head>
     <meta charset="utf-8" />
-    <title>Markdown Guide | Chino520&#39;s Universe</title>
+    <title>A Common-Sense Guide to Data Structure and Algorithms | Chino520&#39;s Universe</title>
     <meta name="author" content="Chino520" />
     <meta name="description" content="Enjoy your music :)" />
     <meta name="keywords" content="keyword1, keywords2" />
@@ -167,14 +167,14 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Markdown Guide</h1>
+        <h1>A Common-Sense Guide to Data Structure and Algorithms</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/10/23
+            2025/10/26
         </span>
         
         <span class="category">
@@ -195,15 +195,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/Markdown/" style="color: #ffa2c4">
-                    Markdown
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/HTML/" style="color: #00a596">
-                    HTML
+                <a href="/tags/Data-Structure-and-Algorithms/" style="color: #00a596">
+                    Data Structure and Algorithms
                 </a>
             </span>
             
@@ -212,166 +205,12 @@
     </div>
     
     <div class="content" v-pre>
-        <div style="text-align: center"><H1>A simple Markdown Guide</H1></div>
+        <p>Remember, It is important to associate new knowledge with those you’ve already learnt.</p>
+<hr>
+<h1 id="Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues"><a href="#Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues" class="headerlink" title="Chapter 9. Crafting Elegant Code with Stacks and Queues"></a>Chapter 9. Crafting Elegant Code with Stacks and Queues</h1><p>Stacks and queues are used to handle temporary data.</p>
+<div style="text-align: center"><H4>Stacks</H4></div>
 
-<img src="/2025/10/23/Markdown-Guide/Markdown.jpg" class="" title="Markdown Guide">
-
-<p>This is a markdown guide that helps you write articles organized and easy to read. This mind map ☝️ shows most syntax that you may need when you intend to explain ideas as clear as possible.</p>
-<p>Please be aware of that when you’re using Hexo, several syntax may be different from the original Markdown’s syntax. I summarized both of Hexo’s syntax and the original Markdown’s syntax in the mind map, and I have stricken through the original one which I recommend you avoid using. </p>
-<p>Also, Markdown cannot deal with some needs such as aligning text to the right, even though these needs are quite common. So I’ll use HTML where Markdown doesn’t satisfy my needs.</p>
-<p>The following content is a practice for these syntax.</p>
-<span id="more"></span>
-
-<hr>
-<h2 id="1-Headings"><a href="#1-Headings" class="headerlink" title="1. Headings"></a>1. Headings</h2><pre><code class="language-Markdown"># Heading level 1
-</code></pre>
-<blockquote>
-<h1 id="Heading-level-1"><a href="#Heading-level-1" class="headerlink" title="Heading level 1"></a>Heading level 1</h1></blockquote>
-<pre><code class="language-Markdown">## Heading level 2
-</code></pre>
-<blockquote>
-<h2 id="Heading-level-2"><a href="#Heading-level-2" class="headerlink" title="Heading level 2"></a>Heading level 2</h2></blockquote>
-<hr>
-<h2 id="2-Text"><a href="#2-Text" class="headerlink" title="2. Text"></a>2. Text</h2><h3 id="2-1-Alignment"><a href="#2-1-Alignment" class="headerlink" title="2.1 Alignment"></a>2.1 Alignment</h3><pre><code class="language-HTML">&amp;#x3C;div style=&quot;text-align: right&quot;&amp;#x3E; Aligning to the right &amp;#x3C;/div&amp;#x3e;
-&amp;#x3C;div style=&quot;text-align: center&quot;&amp;#x3E; Aligning to the center &amp;#x3C;/div&amp;#x3E;
-</code></pre>
-<blockquote>
-<div style="text-align: right">Aligning to the right</div>
-<div style="text-align: center">Aligning to the center</div></blockquote>
-<hr>
-<h2 id="3-Emphasis"><a href="#3-Emphasis" class="headerlink" title="3. Emphasis"></a>3. Emphasis</h2><pre><code class="language-Markdown">**Bold Text**
-*Italic Text*
-***Bold and Italic Text***
-~~Strickthough~~
-==Important Words==
-</code></pre>
-<blockquote>
-<p><strong>Bold Text</strong><br><em>Italic Text</em><br><em><strong>Bold and Italic Text</strong></em><br><del>Strickthough</del><br>&#x3D;&#x3D;Important Words&#x3D;&#x3D;</p>
-</blockquote>
-<hr>
-<h2 id="4-Links"><a href="#4-Links" class="headerlink" title="4. Links"></a>4. Links</h2><pre><code class="language-Markdown">My favorite search engine is [Google](https://www.google.com).
-</code></pre>
-<blockquote>
-<p>My favorite search engine is <a target="_blank" rel="noopener" href="https://www.google.com/">Google</a>.</p>
-</blockquote>
-<pre><code class="language-Markdown">&amp;#x3C;https://chino520.xyz&amp;#x3E;
-&amp;#x3C;chino520forever@gmail.com&amp;#x3E;
-https://chino520.xyz
-`https://chino520.xyz`
-</code></pre>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://chino520.xyz/">https://chino520.xyz</a><br><a href="mailto:&#99;&#104;&#x69;&#x6e;&#x6f;&#x35;&#x32;&#48;&#102;&#111;&#x72;&#101;&#x76;&#101;&#x72;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">chino520forever@gmail.com</a><br><a target="_blank" rel="noopener" href="https://chino520.xyz/">https://chino520.xyz</a><br><code>https://chino520.xyz</code></p>
-</blockquote>
-<hr>
-<h2 id="5-Tables"><a href="#5-Tables" class="headerlink" title="5. Tables"></a>5. Tables</h2><pre><code class="language-Markdown">| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here&#39;s this   |
-| Paragraph   | Text        | And more      |
-</code></pre>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Syntax</th>
-<th align="center">Description</th>
-<th align="right">Test Text</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Header</td>
-<td align="center">Title</td>
-<td align="right">Here’s this</td>
-</tr>
-<tr>
-<td align="left">Paragraph</td>
-<td align="center">Text</td>
-<td align="right">And more</td>
-</tr>
-</tbody></table>
-</blockquote>
-<hr>
-<h2 id="6-Lists"><a href="#6-Lists" class="headerlink" title="6. Lists"></a>6. Lists</h2><h3 id="6-1-Ordered-Lists"><a href="#6-1-Ordered-Lists" class="headerlink" title="6.1 Ordered Lists"></a>6.1 Ordered Lists</h3><pre><code class="language-Markdown">1. First item
-2. Second item
-    1. Indented item
-    2. Indented item
-3. Third item
-</code></pre>
-<blockquote>
-<ol>
-<li>First item</li>
-<li>Second item<ol>
-<li>Indented item</li>
-<li>Indented item</li>
-</ol>
-</li>
-<li>Third item</li>
-</ol>
-</blockquote>
-<h3 id="6-2-Unordered-Lists"><a href="#6-2-Unordered-Lists" class="headerlink" title="6.2 Unordered Lists"></a>6.2 Unordered Lists</h3><pre><code class="language-Markdown">- First item
-- Second item
-    - Indented item
-    - Indented item
-- Third item&#39;
-</code></pre>
-<blockquote>
-<ul>
-<li>First item</li>
-<li>Second item<ul>
-<li>Indented item</li>
-<li>Indented item</li>
-</ul>
-</li>
-<li>Third item</li>
-</ul>
-</blockquote>
-<h3 id="6-3-Task-Lists"><a href="#6-3-Task-Lists" class="headerlink" title="6.3 Task Lists"></a>6.3 Task Lists</h3><pre><code class="language-Markdown">- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-</code></pre>
-<blockquote>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> Write the press release</li>
-<li><input disabled="" type="checkbox"> Update the website</li>
-<li><input disabled="" type="checkbox"> Contact the media</li>
-</ul>
-</blockquote>
-<hr>
-<h2 id="7-Images"><a href="#7-Images" class="headerlink" title="7. Images"></a>7. Images</h2><pre><code class="language-Markdown">&#123;% asset_img "Resource Path" "Description" %&#125;
-</code></pre>
-<blockquote>
-<img src="/2025/10/23/Markdown-Guide/Markdown.jpg" class="" title="Markdown Guide"></blockquote>
-<hr>
-<h2 id="8-Code-Blocks"><a href="#8-Code-Blocks" class="headerlink" title="8. Code Blocks"></a>8. Code Blocks</h2><pre><code class="language-Markdown">&amp;#96;&amp;#96;&amp;#96;Python
-Print(&quot;Hello World!&quot;)
-&amp;#96;&amp;#96;&amp;#96;
-</code></pre>
-<blockquote>
-<pre><code class="language-Python">Print(&quot;Hello World!&quot;)
-</code></pre>
-</blockquote>
-<pre><code class="language-Markdown">At the command prompt, type &amp;#96;nano&amp;#96;.
-</code></pre>
-<blockquote>
-<p>At the command prompt, type <code>nano</code>.</p>
-</blockquote>
-<hr>
-<h2 id="9-Blockquotes"><a href="#9-Blockquotes" class="headerlink" title="9. Blockquotes"></a>9. Blockquotes</h2><pre><code class="language-Markdown">&amp;#x3E; Stronger (What Doesn&#39;t Kill You)
-&amp;#x3E; Kelly Clarkson
-&amp;#x3E; what doesn&#39;t kill you makes you stronger
-</code></pre>
-<blockquote>
-<blockquote>
-<p>Stronger (What Doesn’t Kill You)<br>Kelly Clarkson<br>what doesn’t kill you makes you stronger</p>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="10-Horizontal-Rules"><a href="#10-Horizontal-Rules" class="headerlink" title="10. Horizontal Rules"></a>10. Horizontal Rules</h2><pre><code class="language-Markdown">---
-***
-___
-</code></pre>
-<p>Three of them have the same line style 👇 (Yes! Undoubtedly this separate line!)</p>
-<hr>
-<p>Update coming soon…</p>
+<p>Stacks follow the rule of LIFO, which stands for “Last In, First Out”. This means the item pushed onto a stack is always the first item poped from it. while a stack is not a built-in data structure in most programming languages, it’s still an abstract data type revolves around some other built-in data structure. A programming language linter is an example of the implementation using stacks, and the ‘undo’ function in a word processor is also a great use case for a stack.</p>
 
     </div>
     
