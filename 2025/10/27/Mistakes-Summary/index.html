@@ -195,7 +195,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Chino520/" style="color: #00a596">
+                <a href="/tags/Chino520/" style="color: #ffa2c4">
                     Chino520
                 </a>
             </span>
@@ -206,15 +206,17 @@
     
     <div class="content" v-pre>
         <p>I’m writing this post to summarize all the mistakes I’ve been making for several times. You know what? They just don’t come into my mind!</p>
+<span id="more"></span>
+
 <ol>
 <li>Don’t create mutable objects by *</li>
 </ol>
-<p>❌</p>
 <pre><code class="language-Python">sums = [[0] * number_of_experiments] * number_of_participants
 </code></pre>
-<p>⭕</p>
+<p>❌</p>
 <pre><code class="language-Python">sums = [[0] * number_of_experiments for _ in range(number_of_participants)]
 </code></pre>
+<p>⭕</p>
 <p>When multiply inner lists by *, only the reference of that single inner list will be copied multiple times instead of creating new lists.</p>
 
     </div>
