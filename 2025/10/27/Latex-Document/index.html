@@ -3,7 +3,7 @@
 <html lang="en, jp, cn">
 <head>
     <meta charset="utf-8" />
-    <title>categories | Chino520&#39;s Universe</title>
+    <title>Latex Document | Chino520&#39;s Universe</title>
     <meta name="author" content="Chino520" />
     <meta name="description" content="Enjoy your music :)" />
     <meta name="keywords" content="keyword1, keywords2" />
@@ -43,6 +43,14 @@
 
 <script src="/js/lib/preview.js"></script>
 
+
+
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
 
 
 
@@ -157,25 +165,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        
-        <span>
-            <a href="/categories/Technology/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Technology
-            </a>
+            <div class="article">
+    <div>
+        <h1>Latex Document</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/27
         </span>
         
-        
-        
-        <span>
-            <a href="/categories/Computer/" style="background: #ffa2c4">
+        <span class="category">
+            <a href="/categories/Computer/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -184,95 +187,75 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/Technology/Blog/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Blog
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Latex/" style="color: #ff7d73">
+                    Latex
+                </a>
+            </span>
+            
         </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Technology/Book-Summary/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Book Summary
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Chino520/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Chino520
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Computer/Academic-Research/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Academic Research
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Economics/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Economics
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Psychology/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Psychology
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Economics/Book-Summary/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Book Summary
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/Psychology/Neuroscience/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Neuroscience
-            </a>
-        </span>
-        
         
     </div>
+    
+    <div class="content" v-pre>
+        <p>Hello, there. I’m writing this post for summarizing Latex syntax that are often been used. I don’t like write report in Latex as the syntax are so complicated and it’s easy to forget them once you don’t use Latex for a while. Anyway, let’s start to do our summarizing.</p>
+<ol>
+<li>Inserting an image</li>
+</ol>
+<pre><code class="language-Latex">\begin{figure}[h!]
+        \centering % optional
+        \includegraphics[width=0.8\textwidth]{image.jpg}
+        \caption{cation} % optional
+        \label{fig:mypic} % optional
+\end{figure}
+</code></pre>
+<ol start="2">
+<li>Inserting a list</li>
+</ol>
+<pre><code class="language-Latex">\begin{enumerate}
+        \item ...
+        \item ...
+\end{enumerate}
+</code></pre>
+<ol start="3">
+<li>Inserting a table</li>
+</ol>
+<pre><code class="language-Latex">\begin{tabular}{|c|c|c|}
+        \hline
+        1 &amp; 2 &amp; 3 \\
+        \hline
+        4 &amp; 5 &amp; 6 \\
+        \hline
+\end{tabular}
+</code></pre>
+<ol start="4">
+<li>Emphasizing important words</li>
+</ol>
+<pre><code class="language-Latex">\textbf{}
+</code></pre>
+<p>update coming soon…</p>
+
+    </div>
+    
+    
+    
+    
+    
+        <!-- 样式文件 -->
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+        <div id="comment">
+            <div id="waline-container">
+            </div>
+        </div>
+        
+    
     
 </div>
 
@@ -308,6 +291,29 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://waline-qyunf8hb4-chino520reals-projects.vercel.app/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP",
+        wordLimit: 500,
+        pageSize: "10",
+        login: "disable",
+        
+    });
+</script>
+
+
+
     
 <!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <div id="aplayer"></div>

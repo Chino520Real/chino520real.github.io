@@ -188,6 +188,149 @@
         
 
 <div class="post">
+    <a href="/2025/10/27/Latex-Document/">
+        <h2 class="post-title">Latex Document</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/Computer/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Computer
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>Hello, there. I’m writing this post for summarizing Latex syntax that are often been used. I don’t like write report in Latex as the syntax are so complicated and it’s easy to forget them once you don’t use Latex for a while. Anyway, let’s start to do our summarizing.</p>
+<ol>
+<li>Inserting an image</li>
+</ol>
+<pre><code class="language-Latex">\begin{figure}[h!]
+        \centering % optional
+        \includegraphics[width=0.8\textwidth]{image.jpg}
+        \caption{cation} % optional
+        \label{fig:mypic} % optional
+\end{figure}
+</code></pre>
+<ol start="2">
+<li>Inserting a list</li>
+</ol>
+<pre><code class="language-Latex">\begin{enumerate}
+        \item ...
+        \item ...
+\end{enumerate}
+</code></pre>
+<ol start="3">
+<li>Inserting a table</li>
+</ol>
+<pre><code class="language-Latex">\begin{tabular}{|c|c|c|}
+        \hline
+        1 &amp; 2 &amp; 3 \\
+        \hline
+        4 &amp; 5 &amp; 6 \\
+        \hline
+\end{tabular}
+</code></pre>
+<ol start="4">
+<li>Emphasizing important words</li>
+</ol>
+<pre><code class="language-Latex">\textbf{}
+</code></pre>
+<p>update coming soon…</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Latex/" style="color: #ff7d73">Latex</a>
+        </span>
+        
+    </div>
+    <a href="/2025/10/27/Latex-Document/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2025/10/27/Mistakes-Summary/">
+        <h2 class="post-title">Mistakes Summary</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/Chino520/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Chino520
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/10/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>I’m writing this post to summarize all the mistakes I’ve been making for several times. You know what? They just don’t come into my mind!</p>
+<ol>
+<li>Don’t create mutable objects by *</li>
+</ol>
+<p>❌</p>
+<pre><code class="language-Python">sums = [[0] * number_of_experiments] * number_of_participants
+</code></pre>
+<p>⭕</p>
+<pre><code class="language-Python">sums = [[0] * number_of_experiments for _ in range(number_of_participants)]
+</code></pre>
+<p>When multiply inner lists by *, only the reference of that single inner list will be copied multiple times instead of creating new lists.</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Chino520/" style="color: #ff7d73">Chino520</a>
+        </span>
+        
+    </div>
+    <a href="/2025/10/27/Mistakes-Summary/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2025/10/26/A-Common-Sense-Guide-to-Data-Structure-and-Algorithms/">
         <h2 class="post-title">A Common-Sense Guide to Data Structure and Algorithms</h2>
     </a>
@@ -291,7 +434,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Emotions/" style="color: #ffa2c4">Emotions</a>
+            <a href="/tags/Emotions/" style="color: #00bcd4">Emotions</a>
         </span>
         
         <span class="tag">
@@ -344,12 +487,12 @@
         
         <span class="tag">
             
-            <a href="/tags/Microeconomics/" style="color: #00a596">Microeconomics</a>
+            <a href="/tags/Microeconomics/" style="color: #03a9f4">Microeconomics</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Macroeconomics/" style="color: #00bcd4">Macroeconomics</a>
+            <a href="/tags/Macroeconomics/" style="color: #00a596">Macroeconomics</a>
         </span>
         
     </div>
@@ -399,7 +542,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Programming-Languages/" style="color: #ffa2c4">Programming Languages</a>
+            <a href="/tags/Programming-Languages/" style="color: #ff7d73">Programming Languages</a>
         </span>
         
     </div>
@@ -454,7 +597,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Markdown/" style="color: #03a9f4">Markdown</a>
+            <a href="/tags/Markdown/" style="color: #ffa2c4">Markdown</a>
         </span>
         
         <span class="tag">
@@ -509,17 +652,17 @@
         
         <span class="tag">
             
-            <a href="/tags/Arch-Linux/" style="color: #ff7d73">Arch Linux</a>
+            <a href="/tags/Arch-Linux/" style="color: #00bcd4">Arch Linux</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Hexo/" style="color: #ffa2c4">Hexo</a>
+            <a href="/tags/Hexo/" style="color: #00a596">Hexo</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Spaceship/" style="color: #ff7d73">Spaceship</a>
+            <a href="/tags/Spaceship/" style="color: #03a9f4">Spaceship</a>
         </span>
         
         <span class="tag">
@@ -529,7 +672,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Node-js/" style="color: #ffa2c4">Node.js</a>
+            <a href="/tags/Node-js/" style="color: #00bcd4">Node.js</a>
         </span>
         
         <span class="tag">
@@ -539,22 +682,22 @@
         
         <span class="tag">
             
-            <a href="/tags/Particlex/" style="color: #03a9f4">Particlex</a>
+            <a href="/tags/Particlex/" style="color: #ffa2c4">Particlex</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Waline/" style="color: #00a596">Waline</a>
+            <a href="/tags/Waline/" style="color: #00bcd4">Waline</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/LeanCloud/" style="color: #03a9f4">LeanCloud</a>
+            <a href="/tags/LeanCloud/" style="color: #00a596">LeanCloud</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/SupaBase/" style="color: #ffa2c4">SupaBase</a>
+            <a href="/tags/SupaBase/" style="color: #ff7d73">SupaBase</a>
         </span>
         
         <span class="tag">
@@ -564,7 +707,7 @@
         
         <span class="tag">
             
-            <a href="/tags/DNS/" style="color: #ff7d73">DNS</a>
+            <a href="/tags/DNS/" style="color: #00a596">DNS</a>
         </span>
         
     </div>
