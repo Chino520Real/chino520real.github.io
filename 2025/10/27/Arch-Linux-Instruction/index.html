@@ -182,7 +182,40 @@
     </div>
     
     <div class="content" v-pre>
-        
+        <div style="text-align: center"><H4>Install a Japanese Input Method on Arch Linux</H4></div>
+Install Fcitx5 as the framework and Mozc as the input method
+
+<ol>
+<li>Install Packages</li>
+</ol>
+<pre><code class="language-bash">sudo pacman -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt
+</code></pre>
+<ol start="2">
+<li>Set Environment Variables<br>Add these lines to the shell profile file (~&#x2F;.xprofile for GDM, SDDM, LightDM, ~&#x2F;.bashrc for bash)</li>
+</ol>
+<pre><code class="language-Bash">export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+</code></pre>
+<p>You can check out the shell you’re using by this</p>
+<pre><code class="language-Bash">echo $shell
+</code></pre>
+<ol start="3">
+<li>Autostart Fcitx5</li>
+</ol>
+<pre><code class="language-Bash">fcitx5 -d &amp;
+</code></pre>
+<ol start="4">
+<li><p>Log out &amp; Log in</p>
+</li>
+<li><p>Open the configuration tool by running:</p>
+</li>
+</ol>
+<pre><code class="language-Bash">fcitx5-configtool
+</code></pre>
+<p>In the ‘Input Method’ tab, click the <strong>+</strong> button. Search for and add <strong>Mozc</strong>.</p>
+
     </div>
     
     
