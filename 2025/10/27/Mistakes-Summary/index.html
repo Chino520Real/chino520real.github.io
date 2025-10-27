@@ -211,12 +211,16 @@
 <ol>
 <li>Don’t create mutable objects by *</li>
 </ol>
+<blockquote>
+<p>❌</p>
 <pre><code class="language-Python">sums = [[0] * number_of_experiments] * number_of_participants
 </code></pre>
-<p>❌</p>
+</blockquote>
+<blockquote>
+<p>⭕</p>
 <pre><code class="language-Python">sums = [[0] * number_of_experiments for _ in range(number_of_participants)]
 </code></pre>
-<p>⭕</p>
+</blockquote>
 <p>When multiply inner lists by *, only the reference of that single inner list will be copied multiple times instead of creating new lists.</p>
 
     </div>
