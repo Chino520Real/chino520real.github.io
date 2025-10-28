@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00a596">
+                <a href="/tags/Technology/" style="color: #03a9f4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #00bcd4">
+                <a href="/tags/Hexo/" style="color: #ffa2c4">
                     Hexo
                 </a>
             </span>
@@ -195,21 +195,11 @@
 <h1 id="1-Before-Hexo’s-installation"><a href="#1-Before-Hexo’s-installation" class="headerlink" title="1. Before Hexo’s installation"></a>1. Before Hexo’s installation</h1><ol>
 <li>Create a GitHub repository where store your data</li>
 <li>Download and set up Hexo’s dependency</li>
-<li>Git<br>1. Download by <code>sudo pacman -S git</code><br>2. Set authority information<pre><code class="language-Bash">git config --global  user.email &quot;Your email&quot;
-git config --global  user.name &quot;Your name&quot;
-</code></pre>
-</li>
-</ol>
-<pre><code>3. Generate a SSH key by `ssh-keygen -t ed25519 -C &quot;your_github_email@example.com&quot;`
-  Private key: id_edXXXXX (KEEP IT SECRET)
-  Public key: id_edXXXXX.pub
-4. Copy and paste the SSH key into Github `cat ~/.ssh/id_edXXXXX.pub`
-</code></pre>
-<ol start="2">
+<li>Git<br>1. Download by <code>sudo pacman -S git</code><br>2. Set authority information. Set user email by <code>git config --global  user.email &quot;Your email&quot;</code>, and set user name by <code>git config --global  user.name &quot;Your name&quot;</code><br>3. Generate a SSH key by <code>ssh-keygen -t ed25519 -C &quot;your_github_email@example.com&quot;</code><br> Private key: id_edXXXXX (KEEP IT SECRET)<br> Public key: id_edXXXXX.pub<br>4. Copy and paste the SSH key into Github <code>cat ~/.ssh/id_edXXXXX.pub</code></li>
 <li>OpenSSH<br>1. Start the SSH Agent by <code>eval &quot;$(ssh-agent -s)&quot;</code><br>2. Add your private key by <code>ssh-add ~/.ssh/id_edXXXXX</code><br>3. Test your connection by <code>ssh -T your_github_email@example.com</code></li>
 </ol>
 <p>Spaceship (DNS Service Provier)<br>Buy a domain - chino520.xyz (Bought by myself)<br>What you need to do at DNS provider<br>Edit Custom DNS Records:<br>  Set four A records for mapping the root domain to GitHub’s server<br>  Set a CNAME record for mapping to the specific location which is your repository domain<br>  Set a TXT record for authentication<br>What you need to do at GitHub:<br>  Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code<br>  Go to your repository settings page -&gt; Pages -&gt; Custom domain</p>
-<p>Basic usage<br>Installation<br>Install Node.js - sudo pacman -S nodejs<br>npm(Node Package Manager) - the Official Package Manager - sudo pacman -S npm<br>Install Hexo - sudo npm install -g hexo-cli<br>Initialize the Hexo - hexo init<br>Generate the public directory - hexo generate<br>Install the deployment add-on - sudo npm install hexo-deployer-git –save<br>Edit the _config.yml file<br>  deploy:<br>    type: git<br>    repo: <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">git@github.com</a>:你的用户名&#x2F;你的仓库名.git # 使用SSH地址<br>    branch: main # 或 master，取决于你的仓库设置<br>Deploy Hexo - hexo deploy</p>
+<p>Basic usage<br>Installation<br>Install Node.js - sudo pacman -S nodejs<br>npm(Node Package Manager) - the Official Package Manager - sudo pacman -S npm<br>Install Hexo - sudo npm install -g hexo-cli<br>Initialize the Hexo - hexo init<br>Generate the public directory - hexo generate<br>Install the deployment add-on - sudo npm install hexo-deployer-git –save<br>Edit the _config.yml file<br>  deploy:<br>    type: git<br>    repo: <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">git@github.com</a>:你的用户名&#x2F;你的仓库名.git # 使用SSH地址<br>    branch: main # 或 master，取决于你的仓库设置<br>Deploy Hexo - hexo deploy</p>
 <p>Commands<br>hexo generate<br>hexo deploy<br>hexo cl (Clear the cache)<br>hexo new “[Post Name]”<br>Run “hexo cl &amp;&amp; hexo g &amp;&amp; hexo d” at once</p>
 <p>Add a new menu<br>hexo new page “categories”<br>Add type: “categories” into its front matter</p>
 <p>Customize Different Themes</p>
