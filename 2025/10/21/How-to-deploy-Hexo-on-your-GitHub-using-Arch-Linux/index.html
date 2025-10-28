@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #ff7d73">
+                <a href="/tags/Technology/" style="color: #00bcd4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #00bcd4">
+                <a href="/tags/Hexo/" style="color: #00a596">
                     Hexo
                 </a>
             </span>
@@ -215,32 +215,75 @@
 <ol start="8">
 <li>Deploy Hexo by <code>hexo deploy</code></li>
 </ol>
-<p>Spaceship (DNS Service Provier)<br>Buy a domain - chino520.xyz (Bought by myself)<br>What you need to do at DNS provider<br>Edit Custom DNS Records:<br>  Set four A records for mapping the root domain to GitHub’s server<br>  Set a CNAME record for mapping to the specific location which is your repository domain<br>  Set a TXT record for authentication<br>What you need to do at GitHub:<br>  Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code<br>  Go to your repository settings page -&gt; Pages -&gt; Custom domain</p>
-<p>Basic usage</p>
-<p>Commands<br>hexo generate<br>hexo deploy<br>hexo cl (Clear the cache)<br>hexo new “[Post Name]”<br>Run “hexo cl &amp;&amp; hexo g &amp;&amp; hexo d” at once</p>
-<p>Add a new menu<br>hexo new page “categories”<br>Add type: “categories” into its front matter</p>
-<p>Customize Different Themes</p>
-<p>How to find themes<br>Find themes on <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a><br>Find themes on Github</p>
-<p>Particlex<br>The theme I’m using<br>Waline - A Comment System<br>LeanCloud<br>Register an account and create an application<br>Go to settings -&gt; App Keys and keep three keys: AppID, AppKey and MasterKey<br>SupaBase<br>Sign in using your GitHub account<br>Create a project. Don’t forget your password<br>Copy the official template table to SQL Editor and run it<br>Press connect button and go to View Parameters<br>Keep all parameters<br>Vercel<br>Sign in using your GitHub account<br>Add your GitHub account to Git Scope<br>Press the Create. Vercel will create a new reposotiry<br>Press the Continue to Dashboard<br>Go to Setting -&gt; Environment Variables<br>Add three variables from LeanCloud: LEAN_ID, LEAN_KEY and LEAN_MASTER_KEY<br>Add these variables from SupaBase: PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD, PG_PREFIX(wl_), PG_SSL(empty)<br>Do redeploy<br>Keep the serverURL(<a target="_blank" rel="noopener" href="https://xxx.vercel.app/">https://XXX.vercel.app/</a>)<br>You’ll find it by “visit” button<br>Modify particlex’s setting files<br>_config.yml settings<br>waline -&gt; serverURL</p>
-<p>Add the click heart effect<br>Write animation code and store in themes&#x2F;particlex&#x2F;source&#x2F;js&#x2F;XXX.js<br>Append anime.min.js and the animation js file that you’ve written at the end of themes&#x2F;particlex&#x2F;layout&#x2F;footer.ejs</p>
-<p>Extensions<br>Music Player Implementing it by Injector</p>
-<ol>
-<li>Make a directory ‘scripts’ under &#x2F;</li>
-<li>Create a .js file ‘music-player-injector.js’</li>
-<li>Write injection code into ‘music-player-injector.js’. I wrote it by ChatGPT</li>
-<li>Store music under &#x2F;source&#x2F;music directory</li>
-<li>Store the cover of music under &#x2F;source&#x2F;images directory</li>
-<li>{<br>   name: ‘name’,<br>   artist: ‘artist’,<br>   url: ‘&#x2F;music&#x2F;music.mp3’,<br>   cover: ‘&#x2F;images&#x2F;cover.webp’<br>}</li>
-</ol>
-<p>For more details please refer to the official API</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/api/injector">https://hexo.io/api/injector</a></p>
-</blockquote>
-<p>and Aplayer’s API</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://aplayer.js.org/">https://aplayer.js.org/</a></p>
-</blockquote>
+<h1 id="3-Commands"><a href="#3-Commands" class="headerlink" title="3. Commands"></a>3. Commands</h1><p><code>hexo generate</code><br><code>hexo deploy</code><br>Clear the cache: <code>hexo cl</code><br>When you finished edit posts, run <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> at once<br><code>hexo new &quot;[Post Name]&quot;</code><br>Add a new menu: run <code>hexo new page &quot;tags&quot;</code>, and add “tags” into post’s front matter</p>
+<!--# 4. Customize Your Themes
+You can find themes on https://hexo.io/themes/ or Github. I'm using Particlex theme. Here is its installation process:
+Particlex
+The theme I'm using
+Waline - A Comment System
+LeanCloud
+Register an account and create an application
+Go to settings -> App Keys and keep three keys: AppID, AppKey and MasterKey
+SupaBase
+Sign in using your GitHub account
+Create a project. Don't forget your password
+Copy the official template table to SQL Editor and run it
+Press connect button and go to View Parameters
+Keep all parameters
+Vercel
+Sign in using your GitHub account
+Add your GitHub account to Git Scope
+Press the Create. Vercel will create a new reposotiry
+Press the Continue to Dashboard
+Go to Setting -> Environment Variables
+Add three variables from LeanCloud: LEAN_ID, LEAN_KEY and LEAN_MASTER_KEY
+Add these variables from SupaBase: PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD, PG_PREFIX(wl_), PG_SSL(empty)
+Do redeploy
+Keep the serverURL(https://XXX.vercel.app/)
+You'll find it by "visit" button
+Modify particlex's setting files
+_config.yml settings
+waline -> serverURL
 
+Add the click heart effect
+Write animation code and store in themes/particlex/source/js/XXX.js
+Append anime.min.js and the animation js file that you've written at the end of themes/particlex/layout/footer.ejs-->
+
+<!--# 5. Extensions
+# 5.1 Music Player 
+Implement it by an injector
+1. Make a directory 'scripts' under /
+2. Create a .js file 'music-player-injector.js'
+3. Write injection code into 'music-player-injector.js'. I wrote it by ChatGPT
+4. Store music under /source/music directory
+5. Store the covers of music under /source/images directory
+6. Add music information into music-player-injector.js as following:
+```JavaScript
+{
+  name: 'name',
+  artist: 'artist',
+  url: '/music/music.mp3', 
+  cover: '/images/cover.webp' 
+}
+```
+   
+For more details please refer to the official API
+> https://hexo.io/api/injector
+
+and Aplayer's API
+> https://aplayer.js.org/-->
+
+<h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>Buy a domain -  (I bought this domain by myself from Spaceship——a DNS service provier. After purchasing a domain, you would have to</p>
+<ol>
+<li>Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code</li>
+<li>Edit Custom DNS Records on your DNS service provier setting pages</li>
+<li>Set four A records for mapping the root domain to GitHub’s server</li>
+<li>Set a CNAME record for mapping to the specific location which is your repository domain</li>
+<li>Set a TXT record for </li>
+<li>Waiting for DNS propagation</li>
+<li>Go to your repository settings page -&gt; Pages -&gt; Custom domain</li>
+</ol>
+<!---->
 
 
     </div>
