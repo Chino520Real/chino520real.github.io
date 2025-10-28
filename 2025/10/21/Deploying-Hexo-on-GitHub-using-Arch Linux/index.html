@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00bcd4">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #00a596">
+                <a href="/tags/Hexo/" style="color: #00bcd4">
                     Hexo
                 </a>
             </span>
@@ -193,7 +193,7 @@
 <span id="more"></span>
 
 <h1 id="1-Before-Hexo’s-installation"><a href="#1-Before-Hexo’s-installation" class="headerlink" title="1. Before Hexo’s installation"></a>1. Before Hexo’s installation</h1><ol>
-<li>Create a GitHub repository where store your data</li>
+<li>Create a GitHub repository where stores your data</li>
 <li>Download and set up Hexo’s dependency</li>
 <li>Prepare for Git<br>1. Download by <code>sudo pacman -S git</code><br>2. Set authority information. Set your user email by <code>git config --global  user.email &quot;Your email&quot;</code>, and set your user name by <code>git config --global  user.name &quot;Your name&quot;</code><br>3. Generate a SSH key by <code>ssh-keygen -t ed25519 -C &quot;your_github_email@example.com&quot;</code><br> Private key: id_edXXXXX (KEEP IT SECRET)<br> Public key: id_edXXXXX.pub<br>4. Copy and paste the SSH key into Github <code>cat ~/.ssh/id_edXXXXX.pub</code></li>
 <li>Prepare for OpenSSH<br>1. Start the SSH Agent by <code>eval &quot;$(ssh-agent -s)&quot;</code><br>2. Add your private key by <code>ssh-add ~/.ssh/id_edXXXXX</code><br>3. Test your connection by <code>ssh -T your_github_email@example.com</code></li>
@@ -215,7 +215,7 @@
 <ol start="8">
 <li>Deploy Hexo by <code>hexo deploy</code></li>
 </ol>
-<h1 id="3-Commands"><a href="#3-Commands" class="headerlink" title="3. Commands"></a>3. Commands</h1><p><code>hexo generate</code><br><code>hexo deploy</code><br>Clear the cache: <code>hexo cl</code><br>When you finished editing posts, run <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> at once<br><code>hexo new &quot;[Post Name]&quot;</code><br>Add a new menu: run <code>hexo new page &quot;tags&quot;</code>, and add “tags” into post’s front matter</p>
+<h1 id="3-Hexo’s-Commands"><a href="#3-Hexo’s-Commands" class="headerlink" title="3. Hexo’s Commands"></a>3. Hexo’s Commands</h1><p><code>hexo generate</code><br><code>hexo deploy</code><br>Clear the cache: <code>hexo cl</code><br>When you finished editing posts, run <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> at once<br><code>hexo new &quot;[Post Name]&quot;</code><br>Add a new menu: run <code>hexo new page &quot;tags&quot;</code>, and add “tags” into post’s front matter</p>
 <!--# 4. Customize Your Themes
 You can find themes on https://hexo.io/themes/ or Github. I'm using Particlex theme. Here is its installation process:
 Particlex
@@ -273,7 +273,7 @@ For more details please refer to the official API
 and Aplayer's API
 > https://aplayer.js.org/-->
 
-<h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>Buy a domain -  (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
+<h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>If you are tend to have your own domain, you would have to buy one (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
 <ol>
 <li>Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code</li>
 <li>Edit Custom DNS Records on your DNS service provier setting pages</li>
