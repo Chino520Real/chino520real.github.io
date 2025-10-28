@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #ff7d73">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #ffa2c4">
+                <a href="/tags/Hexo/" style="color: #03a9f4">
                     Hexo
                 </a>
             </span>
@@ -194,15 +194,19 @@
 
 <h1 id="1-Before-Hexo’s-installation"><a href="#1-Before-Hexo’s-installation" class="headerlink" title="1. Before Hexo’s installation"></a>1. Before Hexo’s installation</h1><ol>
 <li>Create a GitHub repository where stores your data</li>
-<li>Prepare for Git</li>
+<li>Prepare for Git<ol>
 <li>Download by <code>sudo pacman -S git</code></li>
 <li>Set authority information. Set your user email by <code>git config --global  user.email &quot;Your email&quot;</code>, and set your user name by <code>git config --global  user.name &quot;Your name&quot;</code></li>
 <li>Generate a SSH key by <code>ssh-keygen -t ed25519 -C &quot;your_github_email@example.com&quot;</code>. Your private key would be <code>id_edXXXXX</code>. KEEP IT IN SECRET! Your public key would be <code>id_edXXXXX.pub</code>.</li>
 <li>Copy and paste the SSH key into Github <code>cat ~/.ssh/id_edXXXXX.pub</code></li>
-<li>Prepare for OpenSSH</li>
+</ol>
+</li>
+<li>Prepare for OpenSSH<ol>
 <li>Start the SSH Agent by <code>eval &quot;$(ssh-agent -s)&quot;</code></li>
 <li>Add your private key by <code>ssh-add ~/.ssh/id_edXXXXX</code></li>
 <li>Test your connection by <code>ssh -T your_github_email@example.com</code></li>
+</ol>
+</li>
 </ol>
 <h1 id="2-Hexo’s-installation"><a href="#2-Hexo’s-installation" class="headerlink" title="2. Hexo’s installation"></a>2. Hexo’s installation</h1><ol>
 <li>Install Node.js by <code>sudo pacman -S nodejs</code></li>
@@ -282,11 +286,13 @@ and Aplayer's API
 <h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>If you are tend to have your own domain, you would have to buy one (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
 <ol>
 <li>Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code</li>
-<li>Edit Custom DNS Records on your DNS service provier setting pages</li>
+<li>Edit Custom DNS Records on your DNS service provier setting pages<ol>
 <li>Set four A records for mapping the root domain to GitHub’s server</li>
 <li>Set a CNAME record for mapping to the specific location which is your repository domain</li>
 <li>Set a TXT record for </li>
 <li>Waiting for DNS propagation</li>
+</ol>
+</li>
 <li>Go to your repository settings page -&gt; Pages -&gt; Custom domain</li>
 </ol>
 <!---->
