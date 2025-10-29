@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #03a9f4">
+                <a href="/tags/Book-Summary/" style="color: #00bcd4">
                     Book Summary
                 </a>
             </span>
@@ -193,7 +193,7 @@
 <span id="more"></span>
 
 <hr>
-<h1 id="Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues"><a href="#Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues" class="headerlink" title="Chapter 9. Crafting Elegant Code with Stacks and Queues"></a>Chapter 9. Crafting Elegant Code with Stacks and Queues</h1><p>Stacks and queues are used to handle temporary data.</p>
+<h1 id="Chapter-9-Stacks-and-Queues"><a href="#Chapter-9-Stacks-and-Queues" class="headerlink" title="Chapter 9. Stacks and Queues"></a>Chapter 9. Stacks and Queues</h1><p>Stacks and queues are used to handle temporary data.</p>
 <div style="text-align: center"><H4>Stacks</H4></div>
 
 <p>Stacks follow the rule of LIFO, which stands for “Last In, First Out”. This means the item pushed onto a stack is always the first item poped from it. While a stack is not a built-in data structure in most programming languages, it’s still an abstract data type revolves around some other built-in data structure. A programming language linter is an example of the implementation using stacks, and the ‘undo’ function in a word processor is also a great use case for a stack.</p>
@@ -245,6 +245,53 @@ end
 
 reversed_string = reverse_strings(&quot;abcdefg&quot;)
 puts reversed_string
+</code></pre>
+<hr>
+<h1 id="Chapter-10-Recursion"><a href="#Chapter-10-Recursion" class="headerlink" title="Chapter 10. Recursion"></a>Chapter 10. Recursion</h1><p>Recursion needs a <strong>base case</strong> to prevent from infinitely recalling itself. In the following case:</p>
+<pre><code class="language-js">function countdown(number)
+    console.log(number)
+    if(number === 0) {
+        return;
+    } else{
+        countdown(number - 1);
+    }
+}
+</code></pre>
+<p>0 is the <strong>base case</strong> for the countdown() function.<br><strong>Stack overflow</strong> might be caused when the recursive functions are recalled again and again until the computer doesn’t have enough memory to hold all the data.</p>
+<h2 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a recursive function that prints all the numbers contained in this array.</p>
+<pre><code class="language-Ruby">array = [   1,
+            2,
+            3,
+            [4, 5, 6],
+            7, 
+            [8,
+                [9, 10, 11,
+                    [12, 13, 14]
+                ]
+            ],
+            [15, 16, 17, 18, 19,
+                [20, 21, 22,
+                    [23, 24, 25,
+                        [26, 27, 29]
+                    ], 30, 31
+                ], 32
+            ], 33
+        ]
+</code></pre>
+<pre><code class="language-Ruby"># the base case would be the last element in the array
+def print_numbers(array)
+    array.each do |element|
+        # .kind_of?(specific kind of data)
+        # As a kind of data, start with a big letter: &#39;Array&#39;. Not &#39;array&#39;.
+        if element.kind_of?(Array)
+            print_numbers(element)
+        else
+            puts element
+        end
+    end
+end
+
+print_numbers(array)
 </code></pre>
 
     </div>
