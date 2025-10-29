@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #ff7d73">
+                <a href="/tags/Technology/" style="color: #00bcd4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #00a596">
+                <a href="/tags/Hexo/" style="color: #ff7d73">
                     Hexo
                 </a>
             </span>
@@ -257,15 +257,16 @@
 <li>Keep the serverURL (<a target="_blank" rel="noopener" href="https://xxx.vercel.app/">https://XXX.vercel.app/</a>). You would go into your backend through “visit” button, and find the serverURL on the browser’s URL bar.</li>
 <li>Modify particlex’s setting files</li>
 </ol>
-<pre><code class="language-_config.yml">waline:
+<pre><code class="language-_config.yml">/themes/particlex/_config.yml
+waline:
   serverURL: https://XXX.vercel.app/
 </code></pre>
 <h2 id="4-2-Add-the-click-heart-effect"><a href="#4-2-Add-the-click-heart-effect" class="headerlink" title="4.2 Add the click heart effect"></a>4.2 Add the click heart effect</h2><ol>
 <li>Write animation code and store it in <code>themes/particlex/source/js/XXX.js</code></li>
 <li>Append the following code at the end of <code>themes/particlex/layout/footer.ejs</code></li>
 </ol>
-<pre><code class="language-Embedded">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;&lt;%- url_for(&#39;/js/heart.js&#39;) %&gt;&quot;&gt;&lt;/script&gt;
+<pre><code class="language-ejs">\&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot;\&gt;\&lt;/script\&gt;
+\&lt;script src=&quot;\&lt;%- url_for(&#39;/js/heart.js&#39;) %\&gt;&quot;\&gt;\&lt;/script\&gt;
 </code></pre>
 <h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>If you are tend to have your own domain, you would have to buy one (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
 <ol>
