@@ -205,12 +205,12 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo/" style="color: #00bcd4">Hexo</a>
+            <a href="/tags/Hexo/" style="color: #03a9f4">Hexo</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Mathematics/" style="color: #ff7d73">Mathematics</a>
+            <a href="/tags/Mathematics/" style="color: #ffa2c4">Mathematics</a>
         </span>
         
     </div>
@@ -249,7 +249,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Technology/" style="color: #ff7d73">Technology</a>
+            <a href="/tags/Technology/" style="color: #00a596">Technology</a>
         </span>
         
     </div>
@@ -288,12 +288,12 @@
         
         <span class="tag">
             
-            <a href="/tags/Technology/" style="color: #00bcd4">Technology</a>
+            <a href="/tags/Technology/" style="color: #00a596">Technology</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Academic-Research/" style="color: #03a9f4">Academic Research</a>
+            <a href="/tags/Academic-Research/" style="color: #00bcd4">Academic Research</a>
         </span>
         
     </div>
@@ -332,7 +332,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Chino520/" style="color: #00a596">Chino520</a>
+            <a href="/tags/Chino520/" style="color: #00bcd4">Chino520</a>
         </span>
         
     </div>
@@ -358,61 +358,6 @@
         <div class="content" v-pre>
             
             <p>Remember, It is important to associate new knowledge with those you’ve already learnt.</p>
-<hr>
-<h1 id="Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues"><a href="#Chapter-9-Crafting-Elegant-Code-with-Stacks-and-Queues" class="headerlink" title="Chapter 9. Crafting Elegant Code with Stacks and Queues"></a>Chapter 9. Crafting Elegant Code with Stacks and Queues</h1><p>Stacks and queues are used to handle temporary data.</p>
-<div style="text-align: center"><H4>Stacks</H4></div>
-
-<p>Stacks follow the rule of LIFO, which stands for “Last In, First Out”. This means the item pushed onto a stack is always the first item poped from it. While a stack is not a built-in data structure in most programming languages, it’s still an abstract data type revolves around some other built-in data structure. A programming language linter is an example of the implementation using stacks, and the ‘undo’ function in a word processor is also a great use case for a stack.</p>
-<div style="text-align: center"><H4>Queues</H4></div>
-
-<p>Queues follow the rule of FIFO, which stands for “First In, First Out”.</p>
-<h2 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a function that uses a stack to reserve a string.</p>
-<pre><code class="language-Ruby"># It is &quot;class&quot;, not &quot;Class&quot;
-class Stack
-    def initialize
-        # @ marks data as an instance variable, which means that every data is unique inside every instance
-        @data = [] 
-    end
-
-    def push(element)
-        @data &lt;&lt; element
-    end
-
-    def pop
-        # removes and returns the last element
-        @data.pop
-    end
-
-    def read
-        # only returns the last element
-        @data.last
-    end
-end
-</code></pre>
-<pre><code class="language-Ruby">require_relative &#39;stack.rb&#39;
-def reverse_strings(string)
-    reversed_string = &quot;&quot;
-    # instance name = (class name).new
-    stack = Stack.new
-
-    # Turn strings into char&#39;s array by string.chars
-    # (iterable object).each do |element|
-    string.chars.each do |char| # Or string.each_char do |char|
-        stack.push(char)
-    end
-    
-    # stack.read likely evaluates to true as long as there is an element to read
-    while stack.read
-        reversed_string &lt;&lt; stack.pop
-    end
-    
-    return reversed_string
-end
-
-reversed_string = reverse_strings(&quot;abcdefg&quot;)
-puts reversed_string
-</code></pre>
-
             
         </div>
     </div>
@@ -426,12 +371,12 @@ puts reversed_string
         
         <span class="tag">
             
-            <a href="/tags/Technology/" style="color: #00bcd4">Technology</a>
+            <a href="/tags/Technology/" style="color: #ff7d73">Technology</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Book-Summary/" style="color: #00a596">Book Summary</a>
+            <a href="/tags/Book-Summary/" style="color: #ffa2c4">Book Summary</a>
         </span>
         
     </div>
@@ -479,12 +424,12 @@ puts reversed_string
         
         <span class="tag">
             
-            <a href="/tags/Neuroscience/" style="color: #00a596">Neuroscience</a>
+            <a href="/tags/Neuroscience/" style="color: #ff7d73">Neuroscience</a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/Psychology/" style="color: #ff7d73">Psychology</a>
+            <a href="/tags/Psychology/" style="color: #00a596">Psychology</a>
         </span>
         
     </div>
@@ -523,7 +468,7 @@ puts reversed_string
         
         <span class="tag">
             
-            <a href="/tags/Book-Summary/" style="color: #00a596">Book Summary</a>
+            <a href="/tags/Book-Summary/" style="color: #03a9f4">Book Summary</a>
         </span>
         
         <span class="tag">
@@ -620,7 +565,7 @@ puts reversed_string
         
         <span class="tag">
             
-            <a href="/tags/Hexo/" style="color: #00bcd4">Hexo</a>
+            <a href="/tags/Hexo/" style="color: #ffa2c4">Hexo</a>
         </span>
         
     </div>
@@ -664,7 +609,7 @@ puts reversed_string
         
         <span class="tag">
             
-            <a href="/tags/Hexo/" style="color: #ffa2c4">Hexo</a>
+            <a href="/tags/Hexo/" style="color: #03a9f4">Hexo</a>
         </span>
         
     </div>
