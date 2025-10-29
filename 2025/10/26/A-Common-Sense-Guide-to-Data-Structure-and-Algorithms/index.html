@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00a596">
+                <a href="/tags/Technology/" style="color: #03a9f4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00bcd4">
+                <a href="/tags/Book-Summary/" style="color: #ff7d73">
                     Book Summary
                 </a>
             </span>
@@ -200,7 +200,7 @@
 <div style="text-align: center"><H4>Queues</H4></div>
 
 <p>Queues follow the rule of FIFO, which stands for “First In, First Out”.</p>
-<h2 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a function that uses a stack to reserve a string.</p>
+<h2 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a function that uses a stack to reserve a string.<br>The stack class is given as follows:</p>
 <pre><code class="language-Ruby"># It is &quot;class&quot;, not &quot;Class&quot;
 class Stack
     def initialize
@@ -223,6 +223,7 @@ class Stack
     end
 end
 </code></pre>
+<p>Solution:</p>
 <pre><code class="language-Ruby">require_relative &#39;stack.rb&#39;
 def reverse_strings(string)
     reversed_string = &quot;&quot;
@@ -278,6 +279,7 @@ puts reversed_string
             ], 33
         ]
 </code></pre>
+<p>Solution:</p>
 <pre><code class="language-Ruby"># the base case would be the last element in the array
 def print_numbers(array)
     array.each do |element|
