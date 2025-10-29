@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #03a9f4">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #ffa2c4">
+                <a href="/tags/Hexo/" style="color: #03a9f4">
                     Hexo
                 </a>
             </span>
@@ -226,39 +226,59 @@
 <li>Deploy Hexo by <code>hexo deploy</code></li>
 </ol>
 <h1 id="3-Hexo’s-Commands"><a href="#3-Hexo’s-Commands" class="headerlink" title="3. Hexo’s Commands"></a>3. Hexo’s Commands</h1><p><code>hexo generate</code><br><code>hexo deploy</code><br>Clear the cache: <code>hexo cl</code><br>When you finished editing posts, run <code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> at once<br><code>hexo new &quot;[Post Name]&quot;</code><br>Add a new menu: run <code>hexo new page &quot;tags&quot;</code>, and add “tags” into post’s front matter</p>
-<!--# 4. Customize Your Themes
-You can find themes on https://hexo.io/themes/ or Github. I'm using Particlex theme. Here is its installation process:
-Particlex
-The theme I'm using
-Waline - A Comment System
-LeanCloud
-Register an account and create an application
-Go to settings -> App Keys and keep three keys: AppID, AppKey and MasterKey
-SupaBase
-Sign in using your GitHub account
-Create a project. Don't forget your password
-Copy the official template table to SQL Editor and run it
-Press connect button and go to View Parameters
-Keep all parameters
-Vercel
-Sign in using your GitHub account
-Add your GitHub account to Git Scope
-Press the Create. Vercel will create a new reposotiry
-Press the Continue to Dashboard
-Go to Setting -> Environment Variables
-Add three variables from LeanCloud: LEAN_ID, LEAN_KEY and LEAN_MASTER_KEY
-Add these variables from SupaBase: PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD, PG_PREFIX(wl_), PG_SSL(empty)
-Do redeploy
-Keep the serverURL(https://XXX.vercel.app/)
-You'll find it by "visit" button
-Modify particlex's setting files
-_config.yml settings
-waline -> serverURL
-
-Add the click heart effect
-Write animation code and store in themes/particlex/source/js/XXX.js
-Append anime.min.js and the animation js file that you've written at the end of themes/particlex/layout/footer.ejs-->
-
+<h1 id="4-Customize-Your-Themes"><a href="#4-Customize-Your-Themes" class="headerlink" title="4. Customize Your Themes"></a>4. Customize Your Themes</h1><p>You can find themes on <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a> or Github. I’m using Particlex theme. Here’s its installation process:</p>
+<ol>
+<li>Go to the themes directory by <code>cd themes</code></li>
+<li>Clone its git repo by <code>git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1</code></li>
+<li>Set up your theme to Particlex by editing Hexo’s _config.yml which is under &#x2F;</li>
+</ol>
+<pre><code class="language-_config_yml">theme: particlex
+</code></pre>
+<p>I also added a comment system and a heart click effect.</p>
+<h2 id="4-1-Waline-A-Comment-System"><a href="#4-1-Waline-A-Comment-System" class="headerlink" title="4.1 Waline - A Comment System"></a>4.1 Waline - A Comment System</h2><p>To deploy Waline, you need the following things: LeanCloud, SupaBase, Vercel</p>
+<h3 id="LeanCloud"><a href="#LeanCloud" class="headerlink" title="LeanCloud"></a>LeanCloud</h3><ol>
+<li>Register an account and create an application</li>
+<li>Go to settings -&gt; App Keys and keep these three keys: AppID, AppKey and MasterKey</li>
+</ol>
+<h3 id="SupaBase"><a href="#SupaBase" class="headerlink" title="SupaBase"></a>SupaBase</h3><ol>
+<li>Sign in using your GitHub account</li>
+<li>Create a project. Don’t forget your password</li>
+<li>Copy the official template table to SQL Editor and run it</li>
+<li>Press connect button and go to View Parameters</li>
+<li>Keep all parameters</li>
+</ol>
+<h3 id="Vercel"><a href="#Vercel" class="headerlink" title="Vercel"></a>Vercel</h3><ol>
+<li>Sign in using your GitHub account and add your GitHub account to Git Scope</li>
+<li>Press the Create. Vercel will create a new reposotiry</li>
+<li>Press the Continue to Dashboard. Go to Setting -&gt; Environment Variables</li>
+<li>Add three new variables that copied from LeanCloud: LEAN_ID, LEAN_KEY and LEAN_MASTER_KEY</li>
+<li>Add these new variables that copied from SupaBase: PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD, PG_PREFIX(wl_), PG_SSL(empty)</li>
+<li>Redeploy the project</li>
+<li>Keep the serverURL (<a target="_blank" rel="noopener" href="https://xxx.vercel.app/">https://XXX.vercel.app/</a>). You would go into your backend through “visit” button, and find the serverURL on the browser’s URL bar.</li>
+<li>Modify particlex’s setting files</li>
+</ol>
+<pre><code class="language-_config.yml">waline:
+  serverURL: https://XXX.vercel.app/
+</code></pre>
+<h2 id="4-2-Add-the-click-heart-effect"><a href="#4-2-Add-the-click-heart-effect" class="headerlink" title="4.2 Add the click heart effect"></a>4.2 Add the click heart effect</h2><ol>
+<li>Write animation code and store it in <code>themes/particlex/source/js/XXX.js</code></li>
+<li>Append the following code at the end of <code>themes/particlex/layout/footer.ejs</code></li>
+</ol>
+<pre><code class="language-Embedded">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;&lt;%- url_for(&#39;/js/heart.js&#39;) %&gt;&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>If you are tend to have your own domain, you would have to buy one (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
+<ol>
+<li>Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code</li>
+<li>Edit Custom DNS Records on your DNS service provier setting pages<ol>
+<li>Set four A records for mapping the root domain to GitHub’s server</li>
+<li>Set a CNAME record for mapping to the specific location which is your repository domain</li>
+<li>Set a TXT record for </li>
+<li>Waiting for DNS propagation</li>
+</ol>
+</li>
+<li>Go to your repository settings page -&gt; Pages -&gt; Custom domain</li>
+</ol>
 <!--# 5. Extensions
 # 5.1 Music Player 
 Implement it by an injector
@@ -283,18 +303,6 @@ For more details please refer to the official API
 and Aplayer's API
 > https://aplayer.js.org/-->
 
-<h1 id="5-Customized-Domain"><a href="#5-Customized-Domain" class="headerlink" title="5. Customized Domain"></a>5. Customized Domain</h1><p>If you are tend to have your own domain, you would have to buy one (I bought this domain by myself from Spaceship——a DNS service provier). After purchasing a domain, you would have to</p>
-<ol>
-<li>Go to your GitHub settings page -&gt; Pages -&gt; Add a domain -&gt; keep the TXT record and code</li>
-<li>Edit Custom DNS Records on your DNS service provier setting pages<ol>
-<li>Set four A records for mapping the root domain to GitHub’s server</li>
-<li>Set a CNAME record for mapping to the specific location which is your repository domain</li>
-<li>Set a TXT record for </li>
-<li>Waiting for DNS propagation</li>
-</ol>
-</li>
-<li>Go to your repository settings page -&gt; Pages -&gt; Custom domain</li>
-</ol>
 <!---->
 
 
