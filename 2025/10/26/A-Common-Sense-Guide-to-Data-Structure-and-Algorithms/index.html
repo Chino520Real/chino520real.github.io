@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #ff7d73">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00a596">
+                <a href="/tags/Book-Summary/" style="color: #00bcd4">
                     Book Summary
                 </a>
             </span>
@@ -194,10 +194,10 @@
 
 <hr>
 <h1 id="Chapter-9-Stacks-and-Queues"><a href="#Chapter-9-Stacks-and-Queues" class="headerlink" title="Chapter 9. Stacks and Queues"></a>Chapter 9. Stacks and Queues</h1><p>Stacks and queues are used to handle temporary data.</p>
-<div style="text-align: center"><H4>Stacks</H4></div>
+<div style="text-align: center"><H3>Stacks</H3></div>
 
 <p>Stacks follow the rule of LIFO, which stands for “Last In, First Out”. This means the item pushed onto a stack is always the first item poped from it. While a stack is not a built-in data structure in most programming languages, it’s still an abstract data type revolves around some other built-in data structure. A programming language linter is an example of the implementation using stacks, and the ‘undo’ function in a word processor is also a great use case for a stack.</p>
-<div style="text-align: center"><H4>Queues</H4></div>
+<div style="text-align: center"><H3>Queues</H3></div>
 
 <p>Queues follow the rule of FIFO, which stands for “First In, First Out”.</p>
 <h2 id="Exercise"><a href="#Exercise" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a function that uses a stack to reserve a string.<br>The stack class is given as follows:</p>
@@ -248,7 +248,7 @@ reversed_string = reverse_strings(&quot;abcdefg&quot;)
 puts reversed_string
 </code></pre>
 <hr>
-<h1 id="Chapter-10-11-Recursion"><a href="#Chapter-10-11-Recursion" class="headerlink" title="Chapter 10 &amp; 11. Recursion"></a>Chapter 10 &amp; 11. Recursion</h1><div style="text-align: center"><H4>Base Case</H4></div>
+<h1 id="Chapter-10-11-Recursion"><a href="#Chapter-10-11-Recursion" class="headerlink" title="Chapter 10 &amp; 11. Recursion"></a>Chapter 10 &amp; 11. Recursion</h1><div style="text-align: center"><H3>Base Case</H3></div>
 
 <p>Recursion needs a <strong>base case</strong> to prevent from infinitely recalling itself. In the following case:</p>
 <pre><code class="language-js">function countdown(number)
@@ -297,7 +297,7 @@ end
 
 print_numbers(array)
 </code></pre>
-<div style="text-align: center"><H4>Passing Extra Parameters</H4></div>
+<div style="text-align: center"><H3>Passing Extra Parameters</H3></div>
 
 <p>The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:</p>
 <pre><code class="language-python">def double_array(array):
@@ -318,7 +318,7 @@ print_numbers(array)
     array[index] *= 2
     double_array(array, index + 1)
 </code></pre>
-<div style="text-align: center"><H4>Bottom-up Approach</H4></div>
+<div style="text-align: center"><H3>Bottom-up Approach</H3></div>
 
 <p>Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).</p>
 <pre><code class="language-ruby">def factorial(n, i=1, product=1)
@@ -335,7 +335,7 @@ end
     return product
 end
 </code></pre>
-<div style="text-align: center"><H4>Top-down Approach</H4></div>
+<div style="text-align: center"><H3>Top-down Approach</H3></div>
 
 <p>The code that solves the factorial problem by using top-down approach would be like this:</p>
 <pre><code class="language-ruby">def factorial(n)
