@@ -172,7 +172,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #03a9f4">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
@@ -248,7 +248,9 @@ reversed_string = reverse_strings(&quot;abcdefg&quot;)
 puts reversed_string
 </code></pre>
 <hr>
-<h1 id="Chapter-10-Recursion"><a href="#Chapter-10-Recursion" class="headerlink" title="Chapter 10. Recursion"></a>Chapter 10. Recursion</h1><p>Recursion needs a <strong>base case</strong> to prevent from infinitely recalling itself. In the following case:</p>
+<h1 id="Chapter-10-11-Recursion"><a href="#Chapter-10-11-Recursion" class="headerlink" title="Chapter 10 &amp; 11. Recursion"></a>Chapter 10 &amp; 11. Recursion</h1><div style="text-align: center"><H4>Base Case</H4></div>
+
+<p>Recursion needs a <strong>base case</strong> to prevent from infinitely recalling itself. In the following case:</p>
 <pre><code class="language-js">function countdown(number)
     console.log(number)
     if(number === 0) {
@@ -284,7 +286,7 @@ puts reversed_string
 def print_numbers(array)
     array.each do |element|
         # .kind_of?(specific kind of data)
-        # As a kind of data, start with a big letter: &#39;Array&#39;. Not &#39;array&#39;.
+        # As a kind of data, start with a big letter: &#39;Array&#39; instead of &#39;array&#39;.
         if element.kind_of?(Array)
             print_numbers(element)
         else
@@ -295,6 +297,60 @@ end
 
 print_numbers(array)
 </code></pre>
+<div style="text-align: center"><H4>Passing Extra Parameters</H4></div>
+The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:
+```Python
+def double_array(array):
+    array[0] *= 2
+    double_array(array)
+```
+
+<p>Then we’ve got stacked here, since we don’t know how to proceed to double the number at index 1. One way to solve this problem is passing the index through an extra parameter.</p>
+<pre><code class="language-python">def double_array(array, index):
+    if index &gt;= len(array):
+        return # The base case
+    array[index] *= 2
+    double_array(array, index + 1)
+</code></pre>
+<p>Admittedly, if we always want to start out index off at 0, we can achieve it by setting a default parameter argument: </p>
+<pre><code class="language-python">def double_array(array, index=0):
+    if index &gt;= len(array):
+        return # The base case
+    array[index] *= 2
+    double_array(array, index + 1)
+</code></pre>
+<div style="text-align: center"><H4>Bottom-up Approach</H4></div>
+Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).
+```ruby
+def factorial(n, i=1, product=1)
+    return product if i > n
+    return factorial(n, i + 1, product * i)
+end
+```
+
+<p>When going bottom up, we’re employing the same strategy for making the calculation as same as we’re using a loop:</p>
+<pre><code class="language-ruby">def factorial(n)
+    product = 1
+    (1...n).each do |num|
+        product *= num
+    end
+    return product
+end
+</code></pre>
+<div style="text-align: center"><H4>Top-down Approach</H4></div>
+The code that solves the factorial problem by using top-down approach would be like this:
+```ruby
+def factorial(n)
+    return 1 if n == 1
+    return n * factorial(n-1)
+end
+```
+
+<p>Technically, we assume that the function will return the correct value without necessarily understanding how the internal factorial functions work. Writing recursive function using a top-down approach can be achieved through two processes:</p>
+<ol>
+<li>Identify the subproblem of the problem.</li>
+<li>Add the base case.<br>This approach benefits us with ignoring the nitty-gitty details of how the algorithms actually works and free our mind.</li>
+</ol>
 
     </div>
     
