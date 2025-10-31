@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #ffa2c4">
+                <a href="/tags/Technology/" style="color: #00a596">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #ff7d73">
+                <a href="/tags/Book-Summary/" style="color: #ffa2c4">
                     Book Summary
                 </a>
             </span>
@@ -298,30 +298,36 @@ end
 print_numbers(array)
 </code></pre>
 <div style="text-align: center"><H3>Identifying the subproblem</H3></div>
-when writing recursive functions, it is important to identify the subproblem of the problem. Now, we have to write a function that sums up all the numbers in a given array. If we pass an array, `[1, 2, 3, 4, 5]` into the function, then the subproblem will be getting the sum of `[2, 3, 4, 5]`, since `[1, 2, 3, 4, 5] = 1 + [2, 3, 4, 5]`
+when writing recursive functions, it is important to identify the subproblem of the problem. Now, we have to write a function that sums up all the numbers in a given array. If we pass an array, `[1, 2, 3, 4, 5]` into the function, then the subproblem will be getting the sum of `[2, 3, 4, 5]`, since `[1, 2, 3, 4, 5] = 1 + [2, 3, 4, 5]`.
 
 
-<div style="text-align: center"><H3>Passing Extra Parameters</H3></div>
+<!--<div style="text-align: center"><H3>Passing Extra Parameters</H3></div>
 
-<p>The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:</p>
-<pre><code class="language-python">def double_array(array):
+The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:
+```python
+def double_array(array):
     array[0] *= 2
     double_array(array)
-</code></pre>
-<p>Then we’ve got stacked here, since we don’t know how to proceed to double the number at index 1. One way to solve this problem is passing the index through an extra parameter.</p>
-<pre><code class="language-python">def double_array(array, index):
-    if index &gt;= len(array):
+```
+
+Then we've got stacked here, since we don't know how to proceed to double the number at index 1. One way to solve this problem is passing the index through an extra parameter.
+```python
+def double_array(array, index):
+    if index >= len(array):
         return # The base case
     array[index] *= 2
     double_array(array, index + 1)
-</code></pre>
-<p>Admittedly, if we always want to start out index off at 0, we can achieve it by setting a default parameter argument: </p>
-<pre><code class="language-python">def double_array(array, index=0):
-    if index &gt;= len(array):
+```
+
+Admittedly, if we always want to start out index off at 0, we can achieve it by setting a default parameter argument: 
+```python
+def double_array(array, index=0):
+    if index >= len(array):
         return # The base case
     array[index] *= 2
     double_array(array, index + 1)
-</code></pre>
+```-->
+
 <div style="text-align: center"><H3>Bottom-up Approach</H3></div>
 
 <p>Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).</p>
@@ -347,12 +353,63 @@ end
     return n * factorial(n-1)
 end
 </code></pre>
-<p>Technically, we assume that the function will return the correct value without necessarily understanding how the internal factorial functions work. Writing recursive function using a top-down approach can be achieved through two processes:</p>
+<p>Technically, we assume that the function will return the correct value without necessarily understanding how the internal factorial functions work. Writing recursive function using a top-down approach can be achieved through three processes:</p>
 <ol>
+<li>Imagine that someone else has alreay implemented the function you’re writing. You only need the return value of that function.</li>
 <li>Identify the subproblem of the problem.</li>
 <li>Add the base case.<br>This approach benefits us with ignoring the nitty-gitty details of how the algorithms actually works and free our mind.</li>
 </ol>
+<h3 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise"></a>Exercise</h3><h4 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h4><p>Use recursion to write a function that accepts an array of strings and returns the total numbers of characters across all the strings.<br>My solution:</p>
+<pre><code class="language-ruby">def char_counter(array)
+    # subproblem
+    # pseudocode: char_counter(array) = sum(array[0]) + char_counter(array[1, array.length - 1])
+    sum = array[0].length
+    # base case
+    return sum if array.length == 1 # using array.length to get the length of an array
+    return sum + char_counter(array[1, array.length - 1])
+end
 
+array = [&#39;ab&#39;, &#39;c&#39;, &#39;def&#39;, &#39;ghij&#39;]
+sum = char_counter(array)
+puts sum
+</code></pre>
+<p>The soluton given in the book:</p>
+<pre><code class="language-ruby">def character_count(array)
+    return 0 if array.length == 0
+    return array[0].length + character_count(array[1, array.length - 1])
+end
+</code></pre>
+<h4 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise 2"></a>Exercise 2</h4><p>Use recursion to write a function that accepts an array of strings and returns the total numbers of characters across all the strings.<br>My solution:</p>
+<pre><code class="language-ruby">def get_even_numbers(array, even_numbers=[])
+    # pseudocode: 
+    # if array[0] is even, save it into an array
+    # get_even_numbers(array[1, array.length - 1])
+    if array[0] % 2 == 0
+        even_numbers &lt;&lt; array[0]
+    end
+    # base case
+    if array.length == 1
+        return even_numbers
+    end
+    return get_even_numbers(array[1, array.length - 1], even_numbers)
+end
+
+array = [1,2,3,4,5,6,12,14,15,16,33,42,53]
+even_numbers = get_even_numbers(array)
+puts even_numbers
+</code></pre>
+<p>The soluton given in the book:<br>First, let’s pretend the <code>select_even</code> function already works. Next, let’s identify the subproblem: if we try to select all the even numbers in an array, <code>[1, 2, 3, 4, 5]</code>, the subproblem would be <code>select_even([2, 3, 4, 5])</code> which returns <code>[2, 4]</code>. Finally, add the base case where there are not any element in the array which returns <code>[]</code>.</p>
+<pre><code class="language-ruby">def select_even(array)
+    return [] if array.empty?
+    
+    if array[0].even?
+        return [array[0]] + select_even(array[1, array.length - 1])
+    else
+        return select_even(array[1, array.length - 1])
+    end
+end
+</code></pre>
+<h4 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise 3"></a>Exercise 3</h4>
     </div>
     
     
