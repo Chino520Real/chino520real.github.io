@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #ff7d73">
+                <a href="/tags/Book-Summary/" style="color: #03a9f4">
                     Book Summary
                 </a>
             </span>
@@ -261,7 +261,7 @@ puts reversed_string
 }
 </code></pre>
 <p>0 is the <strong>base case</strong> for the countdown() function.<br><strong>Stack overflow</strong> might be caused when the recursive functions are recalled again and again until the computer doesn’t have enough memory to hold all the data.</p>
-<h2 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise"></a>Exercise</h2><p>Write a recursive function that prints all the numbers contained in this array.</p>
+<h4 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise"></a>Exercise</h4><p>Write a recursive function that prints all the numbers contained in this array.</p>
 <pre><code class="language-Ruby">array = [   1,
             2,
             3,
@@ -299,7 +299,7 @@ print_numbers(array)
 </code></pre>
 <div style="text-align: center"><H4>Passing Extra Parameters</H4></div>
 The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:
-```Python
+```python
 def double_array(array):
     array[0] *= 2
     double_array(array)
