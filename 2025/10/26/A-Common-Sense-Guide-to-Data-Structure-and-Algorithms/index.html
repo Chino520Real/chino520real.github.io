@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #03a9f4">
+                <a href="/tags/Technology/" style="color: #00bcd4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #ff7d73">
+                <a href="/tags/Book-Summary/" style="color: #00a596">
                     Book Summary
                 </a>
             </span>
@@ -251,7 +251,7 @@ puts reversed_string
 <h1 id="Chapter-10-Recursion"><a href="#Chapter-10-Recursion" class="headerlink" title="Chapter 10. Recursion"></a>Chapter 10. Recursion</h1><div style="text-align: center"><H3>Base Case</H3></div>
 
 <p>Recursion needs a <strong>base case</strong> to prevent from infinitely recalling itself. In the following case:</p>
-<pre><code class="language-js">function countdown(number)
+<pre><code class="language-JavaScript">function countdown(number)
     console.log(number)
     if(number === 0) {
         return;
@@ -331,13 +331,13 @@ def double_array(array, index=0):
 <div style="text-align: center"><H3>Bottom-up Approach</H3></div>
 
 <p>Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).</p>
-<pre><code class="language-ruby">def factorial(n, i=1, product=1)
+<pre><code class="language-Ruby">def factorial(n, i=1, product=1)
     return product if i &gt; n
     return factorial(n, i + 1, product * i)
 end
 </code></pre>
 <p>When going bottom up, we’re employing the same strategy for making the calculation as same as we’re using a loop:</p>
-<pre><code class="language-ruby">def factorial(n)
+<pre><code class="language-Ruby">def factorial(n)
     product = 1
     (1...n).each do |num|
         product *= num
@@ -348,7 +348,7 @@ end
 <div style="text-align: center"><H3>Top-down Approach</H3></div>
 
 <p>The code that solves the factorial problem by using top-down approach would be like this:</p>
-<pre><code class="language-ruby">def factorial(n)
+<pre><code class="language-Ruby">def factorial(n)
     return 1 if n == 1
     return n * factorial(n-1)
 end
@@ -360,7 +360,7 @@ end
 <li>Add the base case.<br>This approach benefits us with ignoring the nitty-gitty details of how the algorithms actually works and free our mind.</li>
 </ol>
 <h3 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise"></a>Exercise</h3><h4 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h4><p>Use recursion to write a function that accepts an array of strings and returns the total numbers of characters across all the strings.<br>My solution:</p>
-<pre><code class="language-ruby">def char_counter(array)
+<pre><code class="language-Ruby">def char_counter(array)
     # subproblem
     # pseudocode: char_counter(array) = sum(array[0]) + char_counter(array[1, array.length - 1])
     sum = array[0].length
@@ -374,13 +374,13 @@ sum = char_counter(array)
 puts sum
 </code></pre>
 <p>The soluton given in the book:</p>
-<pre><code class="language-ruby">def character_count(array)
+<pre><code class="language-Ruby">def character_count(array)
     return 0 if array.length == 0
     return array[0].length + character_count(array[1, array.length - 1])
 end
 </code></pre>
 <h4 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise 2"></a>Exercise 2</h4><p>Use recursion to write a function that accepts an array of strings and returns the total numbers of characters across all the strings.<br>My solution:</p>
-<pre><code class="language-ruby">def get_even_numbers(array, even_numbers=[])
+<pre><code class="language-Ruby">def get_even_numbers(array, even_numbers=[])
     # pseudocode: 
     # if array[0] is even, save it into an array
     # get_even_numbers(array[1, array.length - 1])
@@ -398,8 +398,8 @@ array = [1,2,3,4,5,6,12,14,15,16,33,42,53]
 even_numbers = get_even_numbers(array)
 puts even_numbers
 </code></pre>
-<p>The soluton given in the book:<br>First, let’s pretend the <code>select_even</code> function already works. Next, let’s identify the subproblem: if we try to select all the even numbers in an array, <code>[1, 2, 3, 4, 5]</code>, the subproblem would be <code>select_even([2, 3, 4, 5])</code> which returns <code>[2, 4]</code>. Finally, add the base case where there are not any element in the array which returns <code>[]</code>.</p>
-<pre><code class="language-ruby">def select_even(array)
+<p>The soluton given in the book:<br>First, let’s pretend the <code>select_even</code> function already works. Next, let’s identify the subproblem: if we try to select all the even numbers in an array, <code>[1, 2, 3, 4, 5]</code>, the subproblem would be <code>select_even([2, 3, 4, 5])</code> which returns <code>[2, 4]</code>. Finally, add the base case which returns <code>[]</code> under the situation where there are not any element in the array .</p>
+<pre><code class="language-Ruby">def select_even(array)
     return [] if array.empty?
     
     if array[0].even?
