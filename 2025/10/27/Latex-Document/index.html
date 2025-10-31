@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Academic-Research/" style="color: #ff7d73">
+                <a href="/tags/Academic-Research/" style="color: #00a596">
                     Academic Research
                 </a>
             </span>
@@ -226,6 +226,23 @@
 </ol>
 <pre><code class="language-Latex">\textbf{}
 </code></pre>
+<hr>
+<h1 id="Repair-LaTeX-Error-This-file-needs-format-pLaTeX2e’"><a href="#Repair-LaTeX-Error-This-file-needs-format-pLaTeX2e’" class="headerlink" title="Repair LaTeX Error: This file needs format &#96;pLaTeX2e’"></a>Repair LaTeX Error: This file needs format &#96;pLaTeX2e’</h1><p>This error occurs when you are writing something in Japanese. Here is the solution.</p>
+<ol>
+<li>Create a file named ‘.latexmkrc’ (without “.tex”)</li>
+<li>Insert the following：</li>
+</ol>
+<pre><code class="language-.latexmkrc"># Compile with upLaTeX + dvipdfmx
+$latex = &#39;uplatex&#39;;
+$dvipdf = &#39;dvipdfmx %O -o %D %S&#39;;
+$bibtex = &#39;upbibtex %O %S&#39;;
+$dvipdf = &#39;dvipdfmx %O -o %D %S&#39;;
+$makeindex = &#39;mendex %O -o %D %S&#39;;
+$pdf_mode = 3;
+</code></pre>
+<ol start="3">
+<li>Refresh the project</li>
+</ol>
 <p>update coming soon…</p>
 
     </div>
