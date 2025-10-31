@@ -179,7 +179,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00bcd4">
+                <a href="/tags/Book-Summary/" style="color: #ffa2c4">
                     Book Summary
                 </a>
             </span>
@@ -411,7 +411,8 @@ end
 </code></pre>
 <h4 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise 3"></a>Exercise 3</h4><p>Write a function that acceptsa a number for N and returns the correct number from the “Triangular Numbers” series. The pattern begins as 1, 3, 6, 10, 15, 21, and continues onward with the Nth number in the pattern, which is N plus the previous number. For example, <code>3=1+2</code>, <code>6=3+3</code>, <code>10=6+4</code>.<br>My solution:</p>
 <pre><code class="language-Ruby">def get_triangular_number(n)
-    # 1. assume that someone else has already implemented this function, I only need the return value: Nth number would be N + (N-1)th
+    # 1. assume that someone else has already implemented this function, 
+    # I only need the return value: Nth number would be N + (N-1)th
     # 2. identify the subproblem: get the (N-1)th number from the &quot;Triangular Numbers&quot;
     # 3. add the base case
 
@@ -426,7 +427,8 @@ puts get_triangular_number(6)
 <h4 id="Exercise-4"><a href="#Exercise-4" class="headerlink" title="Exercise 4"></a>Exercise 4</h4><p>Use recurtion to write a function that accepts a string and returns the first index that contains the character ‘x’. To keep things simple, assume that the string has at least one ‘x’.<br>My solution:</p>
 <pre><code class="language-Ruby">def get_index_of_x(string)
     # 1. assume that someone has already finished this function and returns that index.
-    # 2. identify the subproblem: the function that returns the first index that contains the character &#39;x&#39;, which accepts a sub string of the original ranging from index $1$ to index $length - 1$
+    # 2. identify the subproblem: the function that returns the first index that contains the character &#39;x&#39;, 
+    # which accepts a sub string of the original ranging from index $1$ to index $length - 1$
     # 3. add the base case: when we have found the index of &#39;x&#39;
 
     # base case 
@@ -441,7 +443,9 @@ puts get_index_of_x(string)
 <h4 id="Exercise-5"><a href="#Exercise-5" class="headerlink" title="Exercise 5"></a>Exercise 5</h4><p>the “Unique paths” problem: you have a grid of rows and columns. Write a function that accepts a number of rows and a number of columns, and calculates the number of possible “shortest” paths from the upper-leftmost square to the lower-rightmost square.<br>My solution:</p>
 <pre><code class="language-Ruby">def unique_paths_problem(number_of_rows, number_of_columns)
     # 1. assume that the function has been implemented. It would return the number of possible paths.
-    # 2. identify the subproblem of this problem: you&#39;ve already moved one step to the right, or one step downward, and you are supposed to calculate the rest number of possible paths by `unique_paths_problem(number_of_rows - 1, number_of_columns)` or `unique_paths_problem(number_of_rows, number_of_columns - 1)`. 
+    # 2. identify the subproblem of this problem: you&#39;ve already moved one step to the right, or one step downward, 
+    # and you are supposed to calculate the rest number of possible paths 
+    # by `unique_paths_problem(number_of_rows - 1, number_of_columns)` or `unique_paths_problem(number_of_rows, number_of_columns - 1)`. 
     # The total number of possible paths would be the sum of the number of moving to the right and the number of moving downward.
     # However, you would also have to consider the situation in which you have moved to the edge of the bottom side and the right side.
     # 3. add the base case
