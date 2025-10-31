@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00a596">
+                <a href="/tags/Technology/" style="color: #ff7d73">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #03a9f4">
+                <a href="/tags/Book-Summary/" style="color: #00a596">
                     Book Summary
                 </a>
             </span>
@@ -298,13 +298,12 @@ end
 print_numbers(array)
 </code></pre>
 <div style="text-align: center"><H4>Passing Extra Parameters</H4></div>
-The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:
-```python
-def double_array(array):
+
+<p>The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:</p>
+<pre><code class="language-python">def double_array(array):
     array[0] *= 2
     double_array(array)
-```
-
+</code></pre>
 <p>Then we’ve got stacked here, since we don’t know how to proceed to double the number at index 1. One way to solve this problem is passing the index through an extra parameter.</p>
 <pre><code class="language-python">def double_array(array, index):
     if index &gt;= len(array):
@@ -320,14 +319,13 @@ def double_array(array):
     double_array(array, index + 1)
 </code></pre>
 <div style="text-align: center"><H4>Bottom-up Approach</H4></div>
-Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).
-```ruby
-def factorial(n, i=1, product=1)
-    return product if i > n
+
+<p>Factorial refers to calculate the production of consecutive positive numbers starting from 1 to n. The following code is an implementation example to proceed the factorial(n).</p>
+<pre><code class="language-ruby">def factorial(n, i=1, product=1)
+    return product if i &gt; n
     return factorial(n, i + 1, product * i)
 end
-```
-
+</code></pre>
 <p>When going bottom up, we’re employing the same strategy for making the calculation as same as we’re using a loop:</p>
 <pre><code class="language-ruby">def factorial(n)
     product = 1
@@ -338,14 +336,13 @@ end
 end
 </code></pre>
 <div style="text-align: center"><H4>Top-down Approach</H4></div>
-The code that solves the factorial problem by using top-down approach would be like this:
-```ruby
-def factorial(n)
+
+<p>The code that solves the factorial problem by using top-down approach would be like this:</p>
+<pre><code class="language-ruby">def factorial(n)
     return 1 if n == 1
     return n * factorial(n-1)
 end
-```
-
+</code></pre>
 <p>Technically, we assume that the function will return the correct value without necessarily understanding how the internal factorial functions work. Writing recursive function using a top-down approach can be achieved through two processes:</p>
 <ol>
 <li>Identify the subproblem of the problem.</li>
