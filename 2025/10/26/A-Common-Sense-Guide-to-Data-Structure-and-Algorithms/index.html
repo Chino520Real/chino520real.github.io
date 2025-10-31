@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00a596">
+                <a href="/tags/Technology/" style="color: #ffa2c4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00bcd4">
+                <a href="/tags/Book-Summary/" style="color: #ff7d73">
                     Book Summary
                 </a>
             </span>
@@ -297,6 +297,10 @@ end
 
 print_numbers(array)
 </code></pre>
+<div style="text-align: center"><H3>Identifying the subproblem</H3></div>
+when writing recursive functions, it is important to identify the subproblem of the problem. Now, we have to write a function that sums up all the numbers in a given array. If we pass an array, `[1, 2, 3, 4, 5]` into the function, then the subproblem will be getting the sum of `[2, 3, 4, 5]`, since `[1, 2, 3, 4, 5] = 1 + [2, 3, 4, 5]`
+
+
 <div style="text-align: center"><H3>Passing Extra Parameters</H3></div>
 
 <p>The issue is that we want to double every element stored in an array in place, and we tried to implement it as follows:</p>
