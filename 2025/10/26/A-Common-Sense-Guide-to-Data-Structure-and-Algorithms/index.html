@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00bcd4">
+                <a href="/tags/Technology/" style="color: #ffa2c4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00a596">
+                <a href="/tags/Book-Summary/" style="color: #03a9f4">
                     Book Summary
                 </a>
             </span>
@@ -469,7 +469,42 @@ end
 puts unique_paths_problem(3, 7)
 </code></pre>
 <hr>
+<h1 id="Chapter-12-Dynamic-Programming"><a href="#Chapter-12-Dynamic-Programming" class="headerlink" title="Chapter 12. Dynamic Programming"></a>Chapter 12. Dynamic Programming</h1><div style="text-align: center"><H3>Overlapping Subproblems</H3></div>
 
+<p>The following code returns the Nth number in the Fibonacci sequence. </p>
+<pre><code class="language-Python">def fib(n):
+    if n == 0 or n == 1:
+        return n
+    return fib(n - 2) + fib(n - 1)
+</code></pre>
+<p>It has an efficiency of $O(2^N)$ which is unexpected. The reason why it happened is because the recursive functions are repeatedly calculating several Fibonicci numbers such as fib(0) for multiple times. The smaller the number is, the more times the functions are called.</p>
+<div style="text-align: center"><H3>Memoization</H3></div>
+
+<p>One way to optimize the speed of this function is using memoization. We can store every result of <code>fib(n)</code> into a hash table. Before we call <code>fib(n)</code>, it first checks that hash table to see if the the results of <code>fib(n)</code> has already been computed. Only if the 3 key is NOT in the hash table does the function proceed to call <code>fib(3)</code>.</p>
+<pre><code class="language-Python">def fib(n, memo):
+    if n == 0 or n == 1:
+        return n
+    if not memo.get(n):
+        memo[n] = fib(n - 2, memo) + fib(n - 1, memo)
+    return memo[n]
+</code></pre>
+<p>Memoization will raise the speed of this function up to $(2N)-1$, that is, an $O(N)$ algorithms.</p>
+<div style="text-align: center"><H3>Going Bottom-up</H3></div>
+
+<p>The another way is that we start solving this problem with the first two Fibonacci numbers: 0 and 1. Then, use the iteration to build up the sequence.</p>
+<pre><code class="language-Python">def fib(n)
+    if n == 0
+        return 0
+    a = 0
+    b = 1
+    for i in range(1, n):
+        temp = a
+        a = b;
+        b = temp + a
+    return b
+</code></pre>
+<p>Since the loop is from 1 to N, this code takes N steps, so it’s $O(N)$.</p>
+<h3 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise"></a>Exercise</h3><h4 id="Exercise-1-1"><a href="#Exercise-1-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h4>
     </div>
     
     
