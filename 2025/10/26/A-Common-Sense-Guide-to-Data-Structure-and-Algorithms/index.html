@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00a596">
+                <a href="/tags/Technology/" style="color: #00bcd4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00bcd4">
+                <a href="/tags/Book-Summary/" style="color: #00a596">
                     Book Summary
                 </a>
             </span>
@@ -504,7 +504,84 @@ puts unique_paths_problem(3, 7)
     return b
 </code></pre>
 <p>Since the loop is from 1 to N, this code takes N steps, so it’s $O(N)$.</p>
-<h3 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise"></a>Exercise</h3><h4 id="Exercise-1-1"><a href="#Exercise-1-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h4>
+<h3 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise"></a>Exercise</h3><h4 id="Exercise-1-1"><a href="#Exercise-1-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h4><p>Fix the code to eliminate the unnecessary recursion</p>
+<pre><code class="language-Ruby">def add_until_100(array, function_calling_counter=0)
+    puts &quot;add_until_100&quot; # outputs 31 times for the case array = [23, 1, 99, 22]
+    return 0 if array.length == 0
+    if array[0] + add_until_100(array[1, array.length - 1]) &gt; 100
+        return add_until_100(array[1, array.length - 1])
+    else
+        return array[0] + add_until_100(array[1, array.length - 1])
+    end
+end
+</code></pre>
+<p>My solution:</p>
+<pre><code class="language-Ruby">def add_until_100_memoization(array, index=0, hash_table={})
+    puts &quot;add_until_100&quot; # had been outputted 5 times for the case array = [23, 1, 99, 22]
+    return 0 if array.length == 0
+    # Split array[0] + add_until_100(array[1, array.length - 1]) &gt; 100 into three parts:
+    # array[0], add_until_100(array[1, array.length - 1]) and &gt; 100
+    # Only implement the memoization on the result of recursive function
+    if hash_table[index] == nil
+        hash_table[index] = add_until_100_memoization(array[1, array.length - 1], index + 1, hash_table)
+    end
+    # Do the summation and comparison later
+    sum = array[0] + hash_table[index]
+    if sum &gt; 100
+        return hash_table[index]
+    else
+        return sum
+    end
+end
+</code></pre>
+<p>Answer:</p>
+<pre><code class="language-Ruby">def add_until_100_answer(array)
+    puts &quot;add_until_100&quot; # had been outputted 5 times for the case array = [23, 1, 99, 22]
+    return 0 if array.length == 0
+    sum_of_remaining_numbers = add_until_100_answer(array[1, array.length - 1])
+    if array[0] + sum_of_remaining_numbers &gt; 100
+        return sum_of_remaining_numbers
+    else
+        return array[0] + sum_of_remaining_numbers
+    end
+end
+</code></pre>
+<h4 id="Exercise-2-1"><a href="#Exercise-2-1" class="headerlink" title="Exercise 2"></a>Exercise 2</h4><p>The following function uses recursion to calculate the Nth number from “Golomb sequence”. Fix the code to eliminate the unnecessary recursion</p>
+<pre><code class="language-Ruby">def golomb(n)
+    puts &quot;golomb&quot; # once for golomb(1), 4 times for golomb(2), 10 times for golomb(3), 19 times for golomb(4)
+    return 1 if n == 1
+    return 1 + golomb(n - golomb(golomb(n - 1)))
+end
+</code></pre>
+<p>My solution:</p>
+<pre><code class="language-Ruby">def golomb_memoization(n, hash_table={})
+    puts &quot;golomb&quot; # once for golomb(1), 4 times for golomb(2), 7 times for golomb(3), 10 times for golomb(4)
+    return 1 if n == 1
+    if hash_table[n] == nil # Or !hash_table[n]
+        hash_table[n] = 1 + golomb_memoization(n - golomb_memoization(golomb_memoization(n - 1, hash_table), hash_table), hash_table)
+    end
+    return hash_table[n]
+end
+</code></pre>
+<h4 id="Exercise-3-1"><a href="#Exercise-3-1" class="headerlink" title="Exercise 3"></a>Exercise 3</h4><p>Here is a solution to the “Unique Paths” problem from an exercise in the previous chapter. Fix the code to eliminate the unnecessary recursion</p>
+<pre><code class="language-Ruby">def unique_paths(rows, columns)
+    # puts &quot;unique_paths&quot; # outputs 55 times for unique_paths(3, 7)
+    return 1 if rows == 1 || columns == 1
+    return unique_paths(rows - 1, columns) + unique_paths(rows, columns - 1)
+end
+</code></pre>
+<p>My solution:</p>
+<pre><code class="language-Ruby">def unique_paths_memoization(rows, columns, hash_table={})
+    puts &quot;unique_paths_memoization&quot; # outputs 25 times for unique_paths_memoization(3, 7)
+    return 1 if rows == 1 || columns == 1
+    if hash_table[[rows, columns]] == nil # Or !hash_table[[rows, columns]]
+        hash_table[[rows, columns]] = unique_paths_memoization(rows - 1, columns, hash_table) + unique_paths_memoization(rows, columns - 1, hash_table)
+    end
+    return hash_table[[rows, columns]]
+end
+</code></pre>
+<hr>
+
     </div>
     
     
