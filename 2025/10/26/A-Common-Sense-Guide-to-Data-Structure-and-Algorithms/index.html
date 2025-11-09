@@ -172,14 +172,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Technology/" style="color: #00bcd4">
+                <a href="/tags/Technology/" style="color: #03a9f4">
                     Technology
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Book-Summary/" style="color: #00a596">
+                <a href="/tags/Book-Summary/" style="color: #00bcd4">
                     Book Summary
                 </a>
             </span>
@@ -517,7 +517,7 @@ end
 </code></pre>
 <p>My solution:</p>
 <pre><code class="language-Ruby">def add_until_100_memoization(array, index=0, hash_table={})
-    puts &quot;add_until_100&quot; # had been outputted 5 times for the case array = [23, 1, 99, 22]
+    puts &quot;add_until_100&quot; # outputs 5 times for the case array = [23, 1, 99, 22]
     return 0 if array.length == 0
     # Split array[0] + add_until_100(array[1, array.length - 1]) &gt; 100 into three parts:
     # array[0], add_until_100(array[1, array.length - 1]) and &gt; 100
@@ -536,7 +536,7 @@ end
 </code></pre>
 <p>Answer:</p>
 <pre><code class="language-Ruby">def add_until_100_answer(array)
-    puts &quot;add_until_100&quot; # had been outputted 5 times for the case array = [23, 1, 99, 22]
+    puts &quot;add_until_100&quot; # outputs 5 times for the case array = [23, 1, 99, 22]
     return 0 if array.length == 0
     sum_of_remaining_numbers = add_until_100_answer(array[1, array.length - 1])
     if array[0] + sum_of_remaining_numbers &gt; 100
